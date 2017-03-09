@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Single" thread-count="4" parallel="classes">
+	<test name="TestSuite">
+		<parameter name="config" value="single.webdriver.conf.json" />
+		<parameter name="environment" value="chrome" />
+		<classes>
+
+			<class name="stagingQA1.To_verify_regionalmap_presented_on_page_load" />
+		</classes>
+
+	</test>
+</suite>

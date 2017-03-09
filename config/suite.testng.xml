@@ -6,7 +6,7 @@
         <parameter name="environment" value="chrome"/>
         <classes>
 			<class name="stagingQA1.Verify_page_load_on_browser" />
-			
+	
 		</classes>
     </test>
 

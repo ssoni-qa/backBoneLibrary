@@ -74,20 +74,15 @@ public class BrowserStackTestNGTest {
 			l.start(options);
 		}
 		//driver = new RemoteWebDriver(new URL("http://"+username+":"+accessKey+"@"+config.get("server")+"/wd/hub"), capabilities);
-//		if(osName.equals("Windows 7")){
-//			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\chromedriver.exe");
-//			System.out.println(osName);
-//		}
 		driver= new ChromeDriver();
 		wc=new WebDriverWait(driver, 15);
-
-
 	}
-
+	//	if(osName.equals("Windows 7")){		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\chromedriver.exe");
+	//	System.out.println(osName);
+	//	}
 
 	@AfterMethod(alwaysRun=true)
 	public void tearDown() throws Exception {
-		driver.quit();
 		if(l != null) 
 			l.stop();
 	}

@@ -9,9 +9,9 @@ import org.testng.annotations.Test;
 import browserStackTestNG.BrowserStackTestNGTest;
 import page.OpenStreetMapLocatorPage;
 
-public class Verify_page_load_on_browser extends BrowserStackTestNGTest
+public class To_verify_page_load_on_browser extends BrowserStackTestNGTest
 {
-
+    
 	@Test
 	public void verify_page_load_on_browser() throws InterruptedException
 	{
@@ -24,7 +24,7 @@ public class Verify_page_load_on_browser extends BrowserStackTestNGTest
 					+ "if geoIP off, then request address information.");
 			//Getting aut url.
 			driver.get(OpenStreetMapLocatorPage.staging_url_qa1);
-			WebElement addtxt=onPage.addressLine;
+			WebElement addtxt=onPage.addressSearch;
 			wc.until(ExpectedConditions.textToBePresentInElementValue(addtxt, "Arlington Heights  IL 60006"));
 			//Verify Page Load on browser
 			if(driver.getTitle().equals("Problem loading page"))
@@ -33,7 +33,7 @@ public class Verify_page_load_on_browser extends BrowserStackTestNGTest
 			}else {
 				System.out.println("Pass:Page loaded succesfully.");
 			}
-			if(!onPage.addressLine.getAttribute("value").equals(""))
+			if(!onPage.addressSearch.getAttribute("value").equals(""))
 			{
 				System.out.println("Pass: GeoIP is on , location is detected.");
 			}
@@ -46,7 +46,6 @@ public class Verify_page_load_on_browser extends BrowserStackTestNGTest
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			driver.quit();
-
 		}
 		driver.quit();
 	}

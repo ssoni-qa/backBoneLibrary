@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="SuiteBackBoneReport" duration-ms="10877" started-at="2017-03-09T11:05:34Z" finished-at="2017-03-09T11:05:45Z">
+  <suite name="Single" duration-ms="10189" started-at="2017-03-09T13:23:34Z" finished-at="2017-03-09T13:23:44Z">
     <groups>
     </groups>
-    <test name="backBoneSuiteTest" duration-ms="10877" started-at="2017-03-09T11:05:34Z" finished-at="2017-03-09T11:05:45Z">
-      <class name="stagingQA1.Verify_page_load_on_browser">
-        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:stagingQA1.Verify_page_load_on_browser@4dfa3a9d]" name="setUp" is-config="true" duration-ms="1623" started-at="2017-03-09T16:35:34Z" finished-at="2017-03-09T16:35:36Z">
+    <test name="TestSuite" duration-ms="10189" started-at="2017-03-09T13:23:34Z" finished-at="2017-03-09T13:23:44Z">
+      <class name="stagingQA1.To_verify_regionalmap_presented_on_page_load">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:stagingQA1.To_verify_regionalmap_presented_on_page_load@4dfa3a9d]" name="setUp" is-config="true" duration-ms="1591" started-at="2017-03-09T18:53:34Z" finished-at="2017-03-09T18:53:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[suite.conf.json]]>
+                <![CDATA[single.webdriver.conf.json]]>
               </value>
             </param>
             <param index="1">
@@ -23,15 +23,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verify_page_load_on_browser()[pri:0, instance:stagingQA1.Verify_page_load_on_browser@4dfa3a9d]" name="verify_page_load_on_browser" duration-ms="9229" started-at="2017-03-09T16:35:36Z" finished-at="2017-03-09T16:35:45Z">
+        <test-method status="PASS" signature="verify_page_load_on_browser()[pri:0, instance:stagingQA1.To_verify_regionalmap_presented_on_page_load@4dfa3a9d]" name="verify_page_load_on_browser" duration-ms="8573" started-at="2017-03-09T18:53:36Z" finished-at="2017-03-09T18:53:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_page_load_on_browser -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:stagingQA1.Verify_page_load_on_browser@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-03-09T16:35:45Z" finished-at="2017-03-09T16:35:45Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:stagingQA1.To_verify_regionalmap_presented_on_page_load@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-03-09T18:53:44Z" finished-at="2017-03-09T18:53:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- stagingQA1.Verify_page_load_on_browser -->
-    </test> <!-- backBoneSuiteTest -->
-  </suite> <!-- SuiteBackBoneReport -->
+      </class> <!-- stagingQA1.To_verify_regionalmap_presented_on_page_load -->
+    </test> <!-- TestSuite -->
+  </suite> <!-- Single -->
 </testng-results>

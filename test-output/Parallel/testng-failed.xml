@@ -12,6 +12,10 @@
           <include name="tearDown"/>
           <include name="tearDown"/>
           <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
           <include name="setUp"/>
           <include name="setUp"/>
           <include name="setUp"/>
@@ -31,6 +35,10 @@
           <include name="tearDown"/>
           <include name="tearDown"/>
           <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
           <include name="setUp"/>
           <include name="setUp"/>
           <include name="setUp"/>
@@ -39,25 +47,6 @@
       </class> <!-- stagingQA1.Verify_page_load_on_browser -->
     </classes>
   </test> <!-- SingleTestSafari(failed) -->
-  <test name="SingleTestFirefox(failed)" parallel="tests">
-    <parameter name="environment" value="firefox"/>
-    <parameter name="config" value="local.conf.json"/>
-    <classes>
-      <class name="stagingQA1.Verify_page_load_on_browser">
-        <methods>
-          <include name="verify_page_load_on_browser"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- stagingQA1.Verify_page_load_on_browser -->
-    </classes>
-  </test> <!-- SingleTestFirefox(failed) -->
   <test name="SingleTestChrome(failed)" parallel="tests">
     <parameter name="environment" value="chrome"/>
     <parameter name="config" value="local.conf.json"/>
@@ -69,6 +58,10 @@
           <include name="tearDown"/>
           <include name="tearDown"/>
           <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
           <include name="setUp"/>
           <include name="setUp"/>
           <include name="setUp"/>
@@ -77,4 +70,73 @@
       </class> <!-- stagingQA1.Verify_page_load_on_browser -->
     </classes>
   </test> <!-- SingleTestChrome(failed) -->
+  <test name="SingleTestFirefox(failed)" parallel="tests">
+    <parameter name="environment" value="firefox"/>
+    <parameter name="config" value="local.conf.json"/>
+    <classes>
+      <class name="stagingQA1.Verify_page_load_on_browser">
+        <methods>
+          <include name="verify_page_load_on_browser"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingQA1.Verify_page_load_on_browser -->
+    </classes>
+  </test> <!-- SingleTestFirefox(failed) -->
+  <test name="SingleTestAndroid(failed)" parallel="tests">
+    <parameter name="environment" value="android"/>
+    <parameter name="config" value="local.conf.json"/>
+    <classes>
+      <class name="stagingQA1.Verify_page_load_on_browser">
+        <methods>
+          <include name="verify_page_load_on_browser"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingQA1.Verify_page_load_on_browser -->
+    </classes>
+  </test> <!-- SingleTestAndroid(failed) -->
+  <test name="SingleTestiOS(failed)" parallel="tests">
+    <parameter name="environment" value="iphone"/>
+    <parameter name="config" value="local.conf.json"/>
+    <classes>
+      <class name="stagingQA1.Verify_page_load_on_browser">
+        <methods>
+          <include name="verify_page_load_on_browser"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingQA1.Verify_page_load_on_browser -->
+    </classes>
+  </test> <!-- SingleTestiOS(failed) -->
 </suite> <!-- Failed suite [Parallel] -->

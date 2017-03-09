@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [SuiteBackBoneReport]" parallel="tests">
   <test name="backBoneSuiteTest(failed)" parallel="classes">
     <parameter name="environment" value="chrome"/>
-    <parameter name="config" value="local.conf.json"/>
+    <parameter name="config" value="suite.conf.json"/>
     <classes>
-      <class name="qOne.QA_1">
+      <class name="stagingQA1.Verify_page_load_on_browser">
         <methods>
-          <include name="Page_Load_GeoIP_and_cursore_Position"/>
+          <include name="verify_page_load_on_browser"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- qOne.QA_1 -->
+      </class> <!-- stagingQA1.Verify_page_load_on_browser -->
     </classes>
   </test> <!-- backBoneSuiteTest(failed) -->
 </suite> <!-- Failed suite [SuiteBackBoneReport] -->
