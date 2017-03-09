@@ -1,3 +1,2 @@
 /target/
-/src/test/java/browserStackTestNG
-/src/test/resources/conf
+/src/test/resources/conf/

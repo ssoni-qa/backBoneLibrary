@@ -14,9 +14,8 @@ public class OpenStreetMapLocatorPage extends BrowserStackTestNGTest
 		this.driver=driver;
 	}
 	
-	public static String osmURL="http://hosted.where2getit.com/yong/backbone.QA1.html";
+	public static String staging_url_qa1="http://zeus.dev.where2getit.com/yong_test/backbone.QA1.html";
 	@FindBy(name="addressline")
-	@CacheLookup
 	public 
 	WebElement addressLine;
 	

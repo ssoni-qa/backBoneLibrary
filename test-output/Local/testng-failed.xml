@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Local]">
+  <test name="On chrome(failed)">
+    <parameter name="environment" value="chrome"/>
+    <parameter name="config" value="local.conf.json"/>
+    <classes>
+      <class name="stagingQA1.Verify_page_load_on_browser">
+        <methods>
+          <include name="verify_page_load_on_browser"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingQA1.Verify_page_load_on_browser -->
+    </classes>
+  </test> <!-- On chrome(failed) -->
+</suite> <!-- Failed suite [Local] -->

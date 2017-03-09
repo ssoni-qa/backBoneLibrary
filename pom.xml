@@ -22,7 +22,7 @@
 				<inherited>true</inherited>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>config/suite.testng.xml</suiteXmlFile>
+						<suiteXmlFile>config/local.testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>

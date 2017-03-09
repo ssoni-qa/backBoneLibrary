@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Local">
-    <test name="LocalTest">
-        <parameter name="config" value="local.conf.json"/>
-        <parameter name="environment" value="chrome"/>
-        <classes>
-            <class name="clientSide.blankAddress"/>
-        </classes>
-    </test>
+<suite name="Parallel" thread-count="4" parallel="tests">
+	<test name="SingleTestChrome">
+		<parameter name="config" value="local.conf.json" />
+		<parameter name="environment" value="chrome" />
+		<packages>
+			<package name="stagingQA1"></package>
+		</packages>
+	</test>
+
+	<test name="SingleTestFirefox">
+		<parameter name="config" value="local.conf.json" />
+		<parameter name="environment" value="firefox" />
+		<packages>
+			<package name="stagingQA1"></package>
+		</packages>
+	</test>
+
+	<test name="SingleTestSafari">
+		<parameter name="config" value="local.conf.json" />
+		<parameter name="environment" value="safari" />
+		<packages>
+			<package name="stagingQA1"></package>
+		</packages>
+	</test>
+
+	<test name="SingleTestIE">
+		<parameter name="config" value="local.conf.json" />
+		<parameter name="environment" value="ie" />
+		<packages>
+			<package name="stagingQA1"></package>
+		</packages>
+	</test>
 </suite>

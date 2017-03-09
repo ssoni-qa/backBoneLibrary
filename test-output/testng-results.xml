@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="SuiteBackBoneReport" duration-ms="15226" started-at="2017-03-07T10:42:46Z" finished-at="2017-03-07T10:43:01Z">
+  <suite name="SuiteBackBoneReport" duration-ms="10877" started-at="2017-03-09T11:05:34Z" finished-at="2017-03-09T11:05:45Z">
     <groups>
     </groups>
-    <test name="backBoneSuiteTest" duration-ms="15226" started-at="2017-03-07T10:42:46Z" finished-at="2017-03-07T10:43:01Z">
-      <class name="openStreetMapLocator.Verify_page_load_on_browser">
-        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:openStreetMapLocator.Verify_page_load_on_browser@4667ae56]" name="setUp" is-config="true" duration-ms="6729" started-at="2017-03-07T16:12:46Z" finished-at="2017-03-07T16:12:53Z">
+    <test name="backBoneSuiteTest" duration-ms="10877" started-at="2017-03-09T11:05:34Z" finished-at="2017-03-09T11:05:45Z">
+      <class name="stagingQA1.Verify_page_load_on_browser">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:stagingQA1.Verify_page_load_on_browser@4dfa3a9d]" name="setUp" is-config="true" duration-ms="1623" started-at="2017-03-09T16:35:34Z" finished-at="2017-03-09T16:35:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[local.conf.json]]>
+                <![CDATA[suite.conf.json]]>
               </value>
             </param>
             <param index="1">
@@ -23,15 +23,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verify_page_load_on_browser()[pri:0, instance:openStreetMapLocator.Verify_page_load_on_browser@4667ae56]" name="verify_page_load_on_browser" duration-ms="5462" started-at="2017-03-07T16:12:53Z" finished-at="2017-03-07T16:12:58Z">
+        <test-method status="PASS" signature="verify_page_load_on_browser()[pri:0, instance:stagingQA1.Verify_page_load_on_browser@4dfa3a9d]" name="verify_page_load_on_browser" duration-ms="9229" started-at="2017-03-09T16:35:36Z" finished-at="2017-03-09T16:35:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_page_load_on_browser -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:openStreetMapLocator.Verify_page_load_on_browser@4667ae56]" name="tearDown" is-config="true" duration-ms="3014" started-at="2017-03-07T16:12:58Z" finished-at="2017-03-07T16:13:01Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:stagingQA1.Verify_page_load_on_browser@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-03-09T16:35:45Z" finished-at="2017-03-09T16:35:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- openStreetMapLocator.Verify_page_load_on_browser -->
+      </class> <!-- stagingQA1.Verify_page_load_on_browser -->
     </test> <!-- backBoneSuiteTest -->
   </suite> <!-- SuiteBackBoneReport -->
 </testng-results>
