@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [SuiteBackBoneReport]" parallel="tests">
+  <test name="backBoneSuiteTest(failed)" parallel="classes">
+    <parameter name="environment" value="chrome"/>
+    <parameter name="config" value="local.conf.json"/>
+    <classes>
+      <class name="qOne.QA_1">
+        <methods>
+          <include name="Page_Load_GeoIP_and_cursore_Position"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- qOne.QA_1 -->
+    </classes>
+  </test> <!-- backBoneSuiteTest(failed) -->
+</suite> <!-- Failed suite [SuiteBackBoneReport] -->

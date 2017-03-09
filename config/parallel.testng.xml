@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel" thread-count="4" parallel="tests">
+	<test name="SingleTestChrome">
+		<parameter name="config" value="parallel.conf.json" />
+		<parameter name="environment" value="chrome" />
+		<packages>
+			<package name="clientSide"></package>
+			<package name="direction"></package>
+		</packages>
+	</test>
+
+	<test name="SingleTestFirefox">
+		<parameter name="config" value="parallel.conf.json" />
+		<parameter name="environment" value="firefox" />
+		<packages>
+			<package name="clientSide"></package>
+			<package name="direction"></package>
+		</packages>
+	</test>
+
+	<test name="SingleTestSafari">
+		<parameter name="config" value="parallel.conf.json" />
+		<parameter name="environment" value="safari" />
+		<packages>
+			<package name="clientSide"></package>
+			<package name="direction"></package>
+		</packages>
+	</test>
+
+	<test name="SingleTestIE">
+		<parameter name="config" value="parallel.conf.json" />
+		<parameter name="environment" value="ie" />
+		<packages>
+			<package name="clientSide"></package>
+			<package name="direction"></package>
+		</packages>
+	</test>
+</suite>

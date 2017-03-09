@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SuiteBackBoneReport" parallel="tests">
+    <test name="backBoneSuiteTest" thread-count="4" parallel="classes">
+        <parameter name="config" value="local.conf.json"/>
+        <parameter name="environment" value="chrome"/>
+        <classes>
+			<class name="openStreetMapLocator.Verify_page_load_on_browser" />
+			
+		</classes>
+    </test>
+
+    <!-- <test name="PoolTestFirefox" thread-count="3" parallel="classes">
+        <parameter name="config" value="suite.conf.json"/>
+        <parameter name="environment" value="chrome"/>
+        <classes>
+            <class name="direction.dd1"/>
+          </classes>
+    </test> -->
+</suite>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Single" thread-count="4" parallel="classes">
+	<test name="TestSuite">
+		<parameter name="config" value="single.conf.json" />
+		<parameter name="environment" value="chrome" />
+		<classes>
+			<class name="clientSide.SendToEmail" />
+			<class name="clientSide.GetDirectionWithinRadius" />
+			<class name="clientSide.GetDirectionStartEndZipCode" />
+			<class name="locator_NoGeoIP.ValidStateRadius" />
+			<class name="clientSide.InvalidAddressSearch" />
+			<class name="geoCoding.SendToEmail" />
+			<class name="locator_NoGeoIP.GetDirectionInvalidGeoCode" />
+			<class name="direction.MapWithEmail" />
+			<class name="locator_NoGeoIP.BlankAddressSearch" />
+			<class name="locator_Geoip.BlankAddressSearch" />
+			<class name="locator_Geoip.InvalidAddressSearch" />
+			<class name="geoCoding.BlankAddressSearch" />
+			<class name="direction.DirectionSearchAddress" />
+			<class name="locator_NoGeoIP.InvalidGeoCodeSearch" />
+			<class name="locator_Geoip.ValidStateRadius" />
+			<class name="geoCoding.ValidStateRadius" />
+			<class name="geoCoding.InvalidAddressSearch" />
+			<class name="locator_Geoip.GetDirectionValidZipCode" />
+			<class name="locator_NoGeoIP.GetDirectionValidZipCode" />
+			<class name="clientSide.BlankAddressSearch" />
+			<class name="browserStackTestNG.BrowserStackTestNGTest" />
+			<class name="locator_Geoip.InvalidGeoCodeSearch" />
+			<class name="direction.DirectionSearchZipCode" />
+			<class name="direction.MapWithPhone" />
+		</classes>
+		<!-- <packages> <package name="clientSide.*"></package></packages> -->
+	</test>
+</suite>
