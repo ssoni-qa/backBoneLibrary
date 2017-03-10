@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Single" thread-count="4" parallel="classes">
+<suite name="Single" thread-count="1" parallel="classes">
 	<test name="TestSuite">
 		<parameter name="config" value="single.webdriver.conf.json" />
 		<parameter name="environment" value="chrome" />
 		<classes>
-
-			<class name="stagingQA1.To_verify_regionalmap_presented_on_page_load" />
+			<class name="stagingQA1.QA1_To_verify_page_load_on_browser" />
+			<class name="stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load" />
 		</classes>
 
 	</test>

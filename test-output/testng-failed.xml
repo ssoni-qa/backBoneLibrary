@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="4" guice-stage="DEVELOPMENT" name="Failed suite [Single]" parallel="classes">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Single]" parallel="classes">
   <test name="TestSuite(failed)" parallel="classes">
     <parameter name="environment" value="chrome"/>
-    <parameter name="config" value="single.conf.json"/>
+    <parameter name="config" value="single.webdriver.conf.json"/>
     <classes>
-      <class name="stagingQA1.To_verify_regionalmap_presented_on_page_load">
+      <class name="stagingQA1.QA1_To_verify_page_load_on_browser">
         <methods>
-          <include name="verify_page_load_on_browser"/>
+          <include name="handleTestMethodName"/>
+          <include name="getResult"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- stagingQA1.To_verify_regionalmap_presented_on_page_load -->
+      </class> <!-- stagingQA1.QA1_To_verify_page_load_on_browser -->
+      <class name="stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load">
+        <methods>
+          <include name="verify_regionalmap_presented_on_page_load"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="handleTestMethodName"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load -->
     </classes>
   </test> <!-- TestSuite(failed) -->
 </suite> <!-- Failed suite [Single] -->

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Single" duration-ms="10189" started-at="2017-03-09T13:23:34Z" finished-at="2017-03-09T13:23:44Z">
+  <suite name="Single" duration-ms="43672" started-at="2017-03-10T12:56:42Z" finished-at="2017-03-10T12:57:26Z">
     <groups>
     </groups>
-    <test name="TestSuite" duration-ms="10189" started-at="2017-03-09T13:23:34Z" finished-at="2017-03-09T13:23:44Z">
-      <class name="stagingQA1.To_verify_regionalmap_presented_on_page_load">
-        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:stagingQA1.To_verify_regionalmap_presented_on_page_load@4dfa3a9d]" name="setUp" is-config="true" duration-ms="1591" started-at="2017-03-09T18:53:34Z" finished-at="2017-03-09T18:53:36Z">
+    <test name="TestSuite" duration-ms="43672" started-at="2017-03-10T12:56:42Z" finished-at="2017-03-10T12:57:26Z">
+      <class name="stagingQA1.QA1_To_verify_page_load_on_browser">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:stagingQA1.QA1_To_verify_page_load_on_browser@204f30ec]" name="setUp" is-config="true" duration-ms="2228" started-at="2017-03-10T18:26:42Z" finished-at="2017-03-10T18:26:45Z">
           <params>
             <param index="0">
               <value>
@@ -23,15 +23,85 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verify_page_load_on_browser()[pri:0, instance:stagingQA1.To_verify_regionalmap_presented_on_page_load@4dfa3a9d]" name="verify_page_load_on_browser" duration-ms="8573" started-at="2017-03-09T18:53:36Z" finished-at="2017-03-09T18:53:44Z">
+        <test-method status="PASS" signature="verify_page_load_on_browser()[pri:0, instance:stagingQA1.QA1_To_verify_page_load_on_browser@204f30ec]" name="verify_page_load_on_browser" duration-ms="19734" started-at="2017-03-10T18:26:45Z" finished-at="2017-03-10T18:27:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_page_load_on_browser -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:stagingQA1.To_verify_regionalmap_presented_on_page_load@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-03-09T18:53:44Z" finished-at="2017-03-09T18:53:44Z">
+        <test-method status="PASS" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:stagingQA1.QA1_To_verify_page_load_on_browser@204f30ec]" name="handleTestMethodName" is-config="true" duration-ms="0" started-at="2017-03-10T18:26:45Z" finished-at="2017-03-10T18:26:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void stagingQA1.QA1_To_verify_page_load_on_browser.verify_page_load_on_browser() throws java.lang.InterruptedException,java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- handleTestMethodName -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:stagingQA1.QA1_To_verify_page_load_on_browser@204f30ec]" name="getResult" is-config="true" duration-ms="181" started-at="2017-03-10T18:27:04Z" finished-at="2017-03-10T18:27:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_page_load_on_browser status=SUCCESS method=QA1_To_verify_page_load_on_browser.verify_page_load_on_browser()[pri:0, instance:stagingQA1.QA1_To_verify_page_load_on_browser@204f30ec] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:stagingQA1.QA1_To_verify_page_load_on_browser@204f30ec]" name="tearDown" is-config="true" duration-ms="370" started-at="2017-03-10T18:27:05Z" finished-at="2017-03-10T18:27:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- stagingQA1.To_verify_regionalmap_presented_on_page_load -->
+      </class> <!-- stagingQA1.QA1_To_verify_page_load_on_browser -->
+      <class name="stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load@e25b2fe]" name="setUp" is-config="true" duration-ms="1145" started-at="2017-03-10T18:27:05Z" finished-at="2017-03-10T18:27:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[single.webdriver.conf.json]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load@e25b2fe]" name="handleTestMethodName" is-config="true" duration-ms="0" started-at="2017-03-10T18:27:06Z" finished-at="2017-03-10T18:27:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load.verify_regionalmap_presented_on_page_load() throws java.lang.InterruptedException,java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- handleTestMethodName -->
+        <test-method status="PASS" signature="verify_regionalmap_presented_on_page_load()[pri:0, instance:stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load@e25b2fe]" name="verify_regionalmap_presented_on_page_load" duration-ms="19794" started-at="2017-03-10T18:27:06Z" finished-at="2017-03-10T18:27:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_regionalmap_presented_on_page_load -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load@e25b2fe]" name="getResult" is-config="true" duration-ms="124" started-at="2017-03-10T18:27:26Z" finished-at="2017-03-10T18:27:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_regionalmap_presented_on_page_load status=SUCCESS method=QA2_To_verify_regionalmap_presented_on_page_load.verify_regionalmap_presented_on_page_load()[pri:0, instance:stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load@e25b2fe] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load@e25b2fe]" name="tearDown" is-config="true" duration-ms="67" started-at="2017-03-10T18:27:26Z" finished-at="2017-03-10T18:27:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load -->
     </test> <!-- TestSuite -->
   </suite> <!-- Single -->
 </testng-results>

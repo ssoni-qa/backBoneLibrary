@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +102,12 @@
                     <div class="method-list-content passed suite-Single">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Single" title="stagingQA1.To_verify_regionalmap_presented_on_page_load" hash-for-method="verify_page_load_on_browser">verify_page_load_on_browser</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Single" title="stagingQA1.QA1_To_verify_page_load_on_browser" hash-for-method="verify_page_load_on_browser">verify_page_load_on_browser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Single" title="stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load" hash-for-method="verify_regionalmap_presented_on_page_load">verify_regionalmap_presented_on_page_load</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Single -->
@@ -120,7 +125,7 @@
           <div class="suite-Single-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">stagingQA1.To_verify_regionalmap_presented_on_page_load</span>
+              <span class="class-name">stagingQA1.QA1_To_verify_page_load_on_browser</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -128,6 +133,21 @@
                   <a name="verify_page_load_on_browser">
                   </a> <!-- verify_page_load_on_browser -->
                   <span class="method-name">verify_page_load_on_browser</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Single-class-passed -->
+          <div class="suite-Single-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_regionalmap_presented_on_page_load">
+                  </a> <!-- verify_regionalmap_presented_on_page_load -->
+                  <span class="method-name">verify_regionalmap_presented_on_page_load</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -141,12 +161,13 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;4&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Single&quot; parallel=&quot;classes&quot;&gt;
+&lt;suite thread-count=&quot;1&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Single&quot; parallel=&quot;classes&quot;&gt;
   &lt;test name=&quot;TestSuite&quot;&gt;
     &lt;parameter name=&quot;environment&quot; value=&quot;chrome&quot;/&gt;
     &lt;parameter name=&quot;config&quot; value=&quot;single.webdriver.conf.json&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;stagingQA1.To_verify_regionalmap_presented_on_page_load&quot;/&gt;
+      &lt;class name=&quot;stagingQA1.QA1_To_verify_page_load_on_browser&quot;/&gt;
+      &lt;class name=&quot;stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- TestSuite --&gt;
 &lt;/suite&gt; &lt;!-- Single --&gt;
@@ -160,7 +181,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">TestSuite (1 class)</span>
+                <span class="test-name">TestSuite (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -186,16 +207,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verify_page_load_on_browser')
-data.setCell(0, 2, 'stagingQA1.To_verify_regionalmap_presented_on_page_load')
-data.setCell(0, 3, 8573);
+data.setCell(0, 1, 'verify_regionalmap_presented_on_page_load')
+data.setCell(0, 2, 'stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load')
+data.setCell(0, 3, 19794);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'verify_page_load_on_browser')
+data.setCell(1, 2, 'stagingQA1.QA1_To_verify_page_load_on_browser')
+data.setCell(1, 3, 19734);
 window.suiteTableData['Single']= { tableData: data, tableDiv: 'times-div-Single'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 seconds</span>
+              <span class="suite-total-time">Total running time: 39 seconds</span>
               <div id="times-div-Single">
               </div> <!-- times-div-Single -->
             </div> <!-- times-div -->
@@ -221,18 +246,49 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">stagingQA1.To_verify_regionalmap_presented_on_page_load</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">stagingQA1.QA1_To_verify_page_load_on_browser</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(single.webdriver.conf.json, chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">handleTestMethodName(public void stagingQA1.QA1_To_verify_page_load_on_browser.verify_page_load_on_browser() throws java....)</span>
+                <span class="method-start">2228 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verify_page_load_on_browser</span>
-                <span class="method-start">1591 ms</span>
+                <span class="method-start">2228 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=verify_page_load_on_browser status=SUCCESS method=QA1_To_verify_page_load_on_browse...)</span>
+                <span class="method-start">21964 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">10166 ms</span>
+                <span class="method-start">22145 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(single.webdriver.conf.json, chrome)</span>
+                <span class="method-start">22516 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">handleTestMethodName(public void stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load.verify_regionalmap_presented...)</span>
+                <span class="method-start">23661 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verify_regionalmap_presented_on_page_load</span>
+                <span class="method-start">23662 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=verify_regionalmap_presented_on_page_load status=SUCCESS method=QA2_To_verify_regio...)</span>
+                <span class="method-start">43459 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">43583 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -4,17 +4,27 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import com.browserstack.local.Local;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.HTMLReporter;
+import com.relevantcodes.extentreports.NetworkMode;
 
+import java.io.File;
 import java.io.FileReader;
+import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import java.util.Iterator;
+
+import org.apache.commons.io.FileUtils;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -25,9 +35,15 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 
 public class BrowserStackTestNGTest {
-	public WebDriver driver;
+	public  WebDriver driver;
 	public WebDriverWait wc;
 	private Local l;
+    public  ExtentReports extent;
+    public  String dest;
+    public  File destination;
+
+	public  String testName;	
+
 
 	@BeforeMethod(alwaysRun=true)
 	@org.testng.annotations.Parameters(value={"config", "environment"})
@@ -76,14 +92,26 @@ public class BrowserStackTestNGTest {
 		//driver = new RemoteWebDriver(new URL("http://"+username+":"+accessKey+"@"+config.get("server")+"/wd/hub"), capabilities);
 		driver= new ChromeDriver();
 		wc=new WebDriverWait(driver, 15);
+		extent = new ExtentReports("./etestReport/testReport.html",false,NetworkMode.OFFLINE);
 	}
-	//	if(osName.equals("Windows 7")){		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\chromedriver.exe");
-	//	System.out.println(osName);
-	//	}
+	public   String captureScreenMethod(String dest) throws IOException
+	{
+		TakesScreenshot ts=(TakesScreenshot)driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		dest=System.getProperty("user.dir") +"//etestReport//"+this.testName+".png";
+	    destination = new File(dest);
+		FileUtils.copyFile(source, destination);
+		Path p = Paths.get(dest);
+		String screenFile = p.getFileName().toString();
+		return screenFile;
+		
+	}
 
 	@AfterMethod(alwaysRun=true)
 	public void tearDown() throws Exception {
 		if(l != null) 
 			l.stop();
+		extent.flush();
+
 	}
 }

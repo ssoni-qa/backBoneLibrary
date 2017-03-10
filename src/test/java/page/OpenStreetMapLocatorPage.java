@@ -18,7 +18,7 @@ public class OpenStreetMapLocatorPage extends BrowserStackTestNGTest
 	public static String staging_url_qa1="http://zeus.dev.where2getit.com/yong_test/backbone.QA1.html";
 	
 	//Address Search Input TextBox
-	@FindBy(name="addressline")
+	@FindBy(name="addredssline")
 	public 
 	WebElement addressSearch;
 	
