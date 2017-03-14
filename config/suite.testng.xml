@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="SuiteBackBoneReport" parallel="tests">
-    <test name="backBoneSuiteTest" thread-count="4" parallel="classes">
-        <parameter name="config" value="suite.conf.json"/>
-        <parameter name="environment" value="chrome"/>
+<suite name="SuiteBackBoneReport">
+    <test name="backBoneSuiteTest" thread-count="1" >
+        <parameter name="config" value="local.parallel.conf.json"/>
+        <parameter name="environment" value="iphone"/>
         <classes>
-			<class name="stagingQA1.Verify_page_load_on_browser" />
+			<class name="stagingQA1.QA3_To_veirfy_on_Mobile_device_is_GPS_location_detected" />
 	
 		</classes>
     </test>

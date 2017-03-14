@@ -1,0 +1,33 @@
+{
+	"server": "hub-cloud.browserstack.com",
+	"user": "moorthyrajendran1",
+	"key": "zzcZgmGW9d9wmw9wcqGC",
+	"capabilities": {
+		"browserstack.local": true,
+		"browserstack.debug": true
+	},
+	"environments": {
+		"chrome": {
+			"browser": "chrome"
+		},
+		"firefox": {
+			"browser": "firefox"
+		},
+		"safari": {
+			"browser": "safari"
+		},
+		"ie": {
+			"browserName": "internet explorer"
+		},
+		"iphone": {
+			"browserName": "iPhone",
+			"platform": "MAC",
+			"device": "iPhone 5"
+		},
+		"android": {
+			"browserName": "android",
+			"platform": "ANDROID",
+			"device": "Samsung Galaxy S5"
+		}
+	}
+}

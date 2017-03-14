@@ -1,0 +1,18 @@
+{
+	"server": "hub-cloud.browserstack.com",
+	"user": "moorthyrajendran1",
+	"key": "zzcZgmGW9d9wmw9wcqGC",
+	"capabilities": {
+		"build": "testng-browserstack",
+		"name": "suite_test",
+		"browserstack.debug": true
+	},
+	"environments": {
+		"bs": {
+			"browser": "firefox"
+		},
+		"chrome": {
+			"browser": "chrome"
+		}
+	}
+}

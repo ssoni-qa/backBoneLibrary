@@ -14,11 +14,16 @@ public class OpenStreetMapLocatorPage extends BrowserStackTestNGTest
 		this.driver=driver;
 	}
 
-	//Project URL.
+	//Staging Project URL.
+	public static  String url[]={"http://zeus.dev.where2getit.com/yong_test/backbone.QA1.html",
+			"http://zeus.dev.where2getit.com/yong_test/backbone.QA2.html",
+			"http://zeus.dev.where2getit.com/yong_test/backbone.QA3.html"};
+	
+	
 	public static String staging_url_qa1="http://zeus.dev.where2getit.com/yong_test/backbone.QA1.html";
 	
 	//Address Search Input TextBox
-	@FindBy(name="addredssline")
+	@FindBy(name="addressline")
 	public 
 	WebElement addressSearch;
 	
@@ -30,7 +35,14 @@ public class OpenStreetMapLocatorPage extends BrowserStackTestNGTest
 	//Pop Up Close button.
 	@FindBy(className="closeBtn")
 	public WebElement closeButton;
-
+	
+	//Button Search
+	@FindBy(className="button-search")
+	public WebElement buttonSearch;
+	
+	//Modal Message Box
+	@FindBy(xpath="//*[@class='modal']/p")
+	public WebElement modalmsg;
 
 
 

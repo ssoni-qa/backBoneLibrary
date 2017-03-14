@@ -5,23 +5,15 @@
     <parameter name="environment" value="chrome"/>
     <parameter name="config" value="single.webdriver.conf.json"/>
     <classes>
-      <class name="stagingQA1.QA1_To_verify_page_load_on_browser">
+      <class name="stagingQA1.QA14_Moving_the_map_by_dragging">
         <methods>
+          <include name="moving_the_map_by_dragging"/>
           <include name="handleTestMethodName"/>
           <include name="getResult"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- stagingQA1.QA1_To_verify_page_load_on_browser -->
-      <class name="stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load">
-        <methods>
-          <include name="verify_regionalmap_presented_on_page_load"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="handleTestMethodName"/>
-          <include name="getResult"/>
-        </methods>
-      </class> <!-- stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load -->
+      </class> <!-- stagingQA1.QA14_Moving_the_map_by_dragging -->
     </classes>
   </test> <!-- TestSuite(failed) -->
 </suite> <!-- Failed suite [Single] -->

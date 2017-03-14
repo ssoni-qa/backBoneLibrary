@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Single" duration-ms="43672" started-at="2017-03-10T12:56:42Z" finished-at="2017-03-10T12:57:26Z">
+  <suite name="Single" duration-ms="26978" started-at="2017-03-14T13:27:49Z" finished-at="2017-03-14T13:28:16Z">
     <groups>
     </groups>
-    <test name="TestSuite" duration-ms="43672" started-at="2017-03-10T12:56:42Z" finished-at="2017-03-10T12:57:26Z">
+    <test name="TestSuite" duration-ms="26978" started-at="2017-03-14T13:27:49Z" finished-at="2017-03-14T13:28:16Z">
       <class name="stagingQA1.QA1_To_verify_page_load_on_browser">
-        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:stagingQA1.QA1_To_verify_page_load_on_browser@204f30ec]" name="setUp" is-config="true" duration-ms="2228" started-at="2017-03-10T18:26:42Z" finished-at="2017-03-10T18:26:45Z">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:stagingQA1.QA1_To_verify_page_load_on_browser@204f30ec]" name="setUp" is-config="true" duration-ms="2223" started-at="2017-03-14T18:57:49Z" finished-at="2017-03-14T18:57:51Z">
           <params>
             <param index="0">
               <value>
@@ -23,11 +23,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verify_page_load_on_browser()[pri:0, instance:stagingQA1.QA1_To_verify_page_load_on_browser@204f30ec]" name="verify_page_load_on_browser" duration-ms="19734" started-at="2017-03-10T18:26:45Z" finished-at="2017-03-10T18:27:04Z">
+        <test-method status="PASS" signature="verify_page_load_on_browser()[pri:0, instance:stagingQA1.QA1_To_verify_page_load_on_browser@204f30ec]" name="verify_page_load_on_browser" duration-ms="12399" started-at="2017-03-14T18:57:51Z" finished-at="2017-03-14T18:58:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_page_load_on_browser -->
-        <test-method status="PASS" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:stagingQA1.QA1_To_verify_page_load_on_browser@204f30ec]" name="handleTestMethodName" is-config="true" duration-ms="0" started-at="2017-03-10T18:26:45Z" finished-at="2017-03-10T18:26:45Z">
+        <test-method status="PASS" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:stagingQA1.QA1_To_verify_page_load_on_browser@204f30ec]" name="handleTestMethodName" is-config="true" duration-ms="0" started-at="2017-03-14T18:57:51Z" finished-at="2017-03-14T18:57:51Z">
           <params>
             <param index="0">
               <value>
@@ -38,7 +38,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- handleTestMethodName -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:stagingQA1.QA1_To_verify_page_load_on_browser@204f30ec]" name="getResult" is-config="true" duration-ms="181" started-at="2017-03-10T18:27:04Z" finished-at="2017-03-10T18:27:05Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:stagingQA1.QA1_To_verify_page_load_on_browser@204f30ec]" name="getResult" is-config="true" duration-ms="173" started-at="2017-03-14T18:58:04Z" finished-at="2017-03-14T18:58:04Z">
           <params>
             <param index="0">
               <value>
@@ -49,13 +49,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:stagingQA1.QA1_To_verify_page_load_on_browser@204f30ec]" name="tearDown" is-config="true" duration-ms="370" started-at="2017-03-10T18:27:05Z" finished-at="2017-03-10T18:27:05Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:stagingQA1.QA1_To_verify_page_load_on_browser@204f30ec]" name="tearDown" is-config="true" duration-ms="264" started-at="2017-03-14T18:58:04Z" finished-at="2017-03-14T18:58:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- stagingQA1.QA1_To_verify_page_load_on_browser -->
       <class name="stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load">
-        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load@e25b2fe]" name="setUp" is-config="true" duration-ms="1145" started-at="2017-03-10T18:27:05Z" finished-at="2017-03-10T18:27:06Z">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load@e25b2fe]" name="setUp" is-config="true" duration-ms="1545" started-at="2017-03-14T18:58:04Z" finished-at="2017-03-14T18:58:06Z">
           <params>
             <param index="0">
               <value>
@@ -71,7 +71,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load@e25b2fe]" name="handleTestMethodName" is-config="true" duration-ms="0" started-at="2017-03-10T18:27:06Z" finished-at="2017-03-10T18:27:06Z">
+        <test-method status="PASS" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load@e25b2fe]" name="handleTestMethodName" is-config="true" duration-ms="1" started-at="2017-03-14T18:58:06Z" finished-at="2017-03-14T18:58:06Z">
           <params>
             <param index="0">
               <value>
@@ -82,11 +82,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- handleTestMethodName -->
-        <test-method status="PASS" signature="verify_regionalmap_presented_on_page_load()[pri:0, instance:stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load@e25b2fe]" name="verify_regionalmap_presented_on_page_load" duration-ms="19794" started-at="2017-03-10T18:27:06Z" finished-at="2017-03-10T18:27:26Z">
+        <test-method status="PASS" signature="verify_regionalmap_presented_on_page_load()[pri:0, instance:stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load@e25b2fe]" name="verify_regionalmap_presented_on_page_load" duration-ms="10092" started-at="2017-03-14T18:58:06Z" finished-at="2017-03-14T18:58:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_regionalmap_presented_on_page_load -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load@e25b2fe]" name="getResult" is-config="true" duration-ms="124" started-at="2017-03-10T18:27:26Z" finished-at="2017-03-10T18:27:26Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load@e25b2fe]" name="getResult" is-config="true" duration-ms="179" started-at="2017-03-14T18:58:16Z" finished-at="2017-03-14T18:58:16Z">
           <params>
             <param index="0">
               <value>
@@ -97,7 +97,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load@e25b2fe]" name="tearDown" is-config="true" duration-ms="67" started-at="2017-03-10T18:27:26Z" finished-at="2017-03-10T18:27:26Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load@e25b2fe]" name="tearDown" is-config="true" duration-ms="69" started-at="2017-03-14T18:58:16Z" finished-at="2017-03-14T18:58:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

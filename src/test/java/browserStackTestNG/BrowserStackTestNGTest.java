@@ -90,7 +90,7 @@ public class BrowserStackTestNGTest {
 			l.start(options);
 		}
 		//driver = new RemoteWebDriver(new URL("http://"+username+":"+accessKey+"@"+config.get("server")+"/wd/hub"), capabilities);
-		driver= new ChromeDriver();
+	    driver= new ChromeDriver();
 		wc=new WebDriverWait(driver, 15);
 		extent = new ExtentReports("./etestReport/testReport.html",false,NetworkMode.OFFLINE);
 	}

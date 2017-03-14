@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [SuiteBackBoneReport]" parallel="tests">
-  <test name="backBoneSuiteTest(failed)" parallel="classes">
-    <parameter name="environment" value="chrome"/>
-    <parameter name="config" value="suite.conf.json"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [SuiteBackBoneReport]">
+  <test name="backBoneSuiteTest(failed)">
+    <parameter name="environment" value="iphone"/>
+    <parameter name="config" value="local.parallel.conf.json"/>
     <classes>
-      <class name="stagingQA1.Verify_page_load_on_browser">
+      <class name="stagingQA1.QA3_To_veirfy_on_Mobile_device_is_GPS_location_detected">
         <methods>
-          <include name="verify_page_load_on_browser"/>
+          <include name="to_veirfy_on_Mobile_device_is_GPS_location_detected"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- stagingQA1.Verify_page_load_on_browser -->
+      </class> <!-- stagingQA1.QA3_To_veirfy_on_Mobile_device_is_GPS_location_detected -->
     </classes>
   </test> <!-- backBoneSuiteTest(failed) -->
 </suite> <!-- Failed suite [SuiteBackBoneReport] -->

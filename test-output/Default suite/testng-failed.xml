@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="stagingQA1.QA1_To_verify_page_load_on_browser">
+        <methods>
+          <include name="verify_page_load_on_browser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- stagingQA1.QA1_To_verify_page_load_on_browser -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
