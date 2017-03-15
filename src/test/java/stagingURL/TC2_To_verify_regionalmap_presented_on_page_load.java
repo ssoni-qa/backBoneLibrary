@@ -1,4 +1,4 @@
-package stagingQA1;
+package stagingURL;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -19,7 +19,7 @@ import com.relevantcodes.extentreports.LogStatus;
 import browserStackTestNG.BrowserStackTestNGTest;
 import page.OpenStreetMapLocatorPage;
 
-public class QA2_To_verify_regionalmap_presented_on_page_load extends BrowserStackTestNGTest
+public class TC2_To_verify_regionalmap_presented_on_page_load extends BrowserStackTestNGTest
 {
 	ExtentTest testqa2 ;
 	@BeforeMethod
@@ -36,7 +36,7 @@ public class QA2_To_verify_regionalmap_presented_on_page_load extends BrowserSta
 				+ "or the geographical location of your IP address "
 				+ "( please note due to the VPN connection, "
 				+ "your IP address might not match your current location )");
-		for (String stagingURL:OpenStreetMapLocatorPage.url) {
+		for (String stagingURL:OpenStreetMapLocatorPage.stagingURL) {
 			try {
 				testqa2 = extent.startTest("QA 2: GEOIP detected Map",
 						"To verify if the regional map is presented on page load");
@@ -50,7 +50,7 @@ public class QA2_To_verify_regionalmap_presented_on_page_load extends BrowserSta
 				OpenStreetMapLocatorPage onPage = PageFactory.initElements(driver, OpenStreetMapLocatorPage.class);
 				
 				//Getting aut url.
-				driver.get(OpenStreetMapLocatorPage.staging_url_qa1);
+				driver.get(stagingURL);
 
 				WebElement addtxt = onPage.addressSearch;
 
@@ -66,7 +66,7 @@ public class QA2_To_verify_regionalmap_presented_on_page_load extends BrowserSta
 				} else {
 					System.out.println("Fail:GEOIP detected Map");
 					testqa2.log(LogStatus.FAIL,
-							"GEOIP does not detected Map : " + testqa2.addScreenCapture(captureScreenMethod(dest)));
+							"Test Case Fail : " + testqa2.addScreenCapture(captureScreenMethod(dest)));
 				}
 				extent.endTest(testqa2);
 

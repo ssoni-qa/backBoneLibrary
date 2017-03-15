@@ -15,7 +15,7 @@ public class OpenStreetMapLocatorPage extends BrowserStackTestNGTest
 	}
 
 	//Staging Project URL.
-	public static  String url[]={"http://zeus.dev.where2getit.com/yong_test/backbone.QA1.html",
+	public static  String stagingURL[]={"http://zeus.dev.where2getit.com/yong_test/backbone.QA1.html",
 			"http://zeus.dev.where2getit.com/yong_test/backbone.QA2.html",
 			"http://zeus.dev.where2getit.com/yong_test/backbone.QA3.html"};
 	
@@ -31,6 +31,11 @@ public class OpenStreetMapLocatorPage extends BrowserStackTestNGTest
 	@FindBy(id="search_country")
 	public 
 	WebElement searchCountryOption;
+	
+	//Search Address Drop Down box.
+		@FindBy(name="searchradius")
+		public 
+		WebElement chooseRadius;
 	
 	//Pop Up Close button.
 	@FindBy(className="closeBtn")

@@ -1,4 +1,4 @@
-package stagingQA1;
+package stagingURL;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -20,7 +20,7 @@ import com.relevantcodes.extentreports.LogStatus;
 import browserStackTestNG.BrowserStackTestNGTest;
 import page.OpenStreetMapLocatorPage;
 
-public class QA8_valid_city_and_state_name extends BrowserStackTestNGTest
+public class TC8_valid_city_and_state_name extends BrowserStackTestNGTest
 {
 	ExtentTest testqa8 ;
 	@BeforeMethod
@@ -53,7 +53,7 @@ public class QA8_valid_city_and_state_name extends BrowserStackTestNGTest
 
 			addtxt.clear();
 
-			addtxt.sendKeys("JONESBORO");
+			addtxt.sendKeys("JONESBORO , GA");
 			onPage.buttonSearch.click();
 
 			wc.until(ExpectedConditions.textToBePresentInElement(By.xpath("//h3"), "Please select your location"));

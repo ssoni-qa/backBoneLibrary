@@ -5,22 +5,17 @@
 		<parameter name="config" value="single.webdriver.conf.json" />
 		<parameter name="environment" value="chrome" />
 		<classes>
-		<class name="stagingQA1.QA1_To_verify_page_load_on_browser" />
- 		<class name="stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load" />
-			<!-- <class name="stagingQA1.QA1_To_verify_page_load_on_browser" />
-			<class name="stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load" />
-		<class name="stagingQA1.QA3_To_veirfy_on_Mobile_device_is_GPS_location_detected" />	
-			<class name="stagingQA1.QA4_Blank_address_search_textbox" /> 
-			<class name="stagingQA1.QA5_Special_characters_in_the_search_textbox" /> 
-			<class name="stagingQA1.QA6_valid_postal_code" /> 
-			<class name="stagingQA1.QA7_invalid_postal_code" /> 
-			<class name="stagingQA1.QA8_valid_city_and_state_name" /> 
-			<class name="stagingQA1.QA9_Invalid_city_and_state_name" /> 
-			<class name="stagingQA1.QA10_valid_cityName_invalid_state" /> 
-			<class name="stagingQA1.QA13_Valid_Street_address_with_invalid_City_name_and_valid_StateProvince_name" /> -
-			<class name="stagingQA1.QA14_Moving_the_map_by_dragging" />-->
-			
-			
+			<class name="stagingURL.TC18_No_changes_to_search_filters_based_on_the_map_movement" />
+			<!-- <class name="stagingQA1.QA1_To_verify_page_load_on_browser" /> <class 
+				name="stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load" /> <class 
+				name="stagingQA1.QA3_To_veirfy_on_Mobile_device_is_GPS_location_detected" 
+				/> <class name="stagingQA1.QA4_Blank_address_search_textbox" /> <class name="stagingQA1.QA5_Special_characters_in_the_search_textbox" 
+				/> <class name="stagingQA1.QA6_valid_postal_code" /> <class name="stagingQA1.QA7_invalid_postal_code" 
+				/> <class name="stagingQA1.QA8_valid_city_and_state_name" /> <class name="stagingQA1.QA9_Invalid_city_and_state_name" 
+				/> <class name="stagingQA1.QA10_valid_cityName_invalid_state" /> <class name="stagingQA1.QA13_Valid_Street_address_with_invalid_City_name_and_valid_StateProvince_name" 
+				/> - <class name="stagingQA1.QA14_Moving_the_map_by_dragging" /> -->
+
+
 
 
 		</classes>

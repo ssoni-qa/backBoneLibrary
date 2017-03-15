@@ -1,4 +1,4 @@
-package stagingQA1;
+package stagingURL;
 
 import java.lang.reflect.Method;
 
@@ -13,7 +13,7 @@ import com.relevantcodes.extentreports.LogStatus;
 import browserStackTestNG.BrowserStackTestNGTest;
 import page.OpenStreetMapLocatorPage;
 
-public class QA3_To_veirfy_on_Mobile_device_is_GPS_location_detected extends BrowserStackTestNGTest {
+public class TC3_To_veirfy_on_Mobile_device_is_GPS_location_detected extends BrowserStackTestNGTest {
 
 	ExtentTest testqa3;
 	@BeforeMethod

@@ -92,7 +92,7 @@ public class BrowserStackTestNGTest {
 		//driver = new RemoteWebDriver(new URL("http://"+username+":"+accessKey+"@"+config.get("server")+"/wd/hub"), capabilities);
 	    driver= new ChromeDriver();
 		wc=new WebDriverWait(driver, 15);
-		extent = new ExtentReports("./etestReport/testReport.html",false,NetworkMode.OFFLINE);
+		extent = new ExtentReports("./etestReport/testReport.html",true,NetworkMode.OFFLINE);
 	}
 	public   String captureScreenMethod(String dest) throws IOException
 	{
