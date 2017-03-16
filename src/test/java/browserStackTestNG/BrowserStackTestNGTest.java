@@ -1,6 +1,7 @@
 package browserStackTestNG;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.asserts.SoftAssert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import com.browserstack.local.Local;
@@ -41,8 +42,8 @@ public class BrowserStackTestNGTest {
     public  ExtentReports extent;
     public  String dest;
     public  File destination;
-
-	public  String testName;	
+	public  String testName;
+	public SoftAssert s_assert;
 
 
 	@BeforeMethod(alwaysRun=true)
@@ -91,8 +92,10 @@ public class BrowserStackTestNGTest {
 		}
 		//driver = new RemoteWebDriver(new URL("http://"+username+":"+accessKey+"@"+config.get("server")+"/wd/hub"), capabilities);
 	    driver= new ChromeDriver();
-		wc=new WebDriverWait(driver, 15);
+		wc=new WebDriverWait(driver, 30);
 		extent = new ExtentReports("./etestReport/testReport.html",true,NetworkMode.OFFLINE);
+		//Created object of testng SoftAssert class to use It's Properties.
+		s_assert = new SoftAssert();
 	}
 	public   String captureScreenMethod(String dest) throws IOException
 	{

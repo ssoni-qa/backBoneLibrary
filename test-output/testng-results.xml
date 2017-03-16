@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Single" duration-ms="36630" started-at="2017-03-15T12:59:04Z" finished-at="2017-03-15T12:59:40Z">
+  <suite name="Single" duration-ms="53131" started-at="2017-03-16T12:40:31Z" finished-at="2017-03-16T12:41:25Z">
     <groups>
     </groups>
-    <test name="TestSuite" duration-ms="36630" started-at="2017-03-15T12:59:04Z" finished-at="2017-03-15T12:59:40Z">
-      <class name="stagingURL.TC18_No_changes_to_search_filters_based_on_the_map_movement">
-        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:stagingURL.TC18_No_changes_to_search_filters_based_on_the_map_movement@4667ae56]" name="setUp" is-config="true" duration-ms="2176" started-at="2017-03-15T18:29:04Z" finished-at="2017-03-15T18:29:06Z">
+    <test name="TestSuite" duration-ms="53131" started-at="2017-03-16T12:40:31Z" finished-at="2017-03-16T12:41:25Z">
+      <class name="stagingURL.TC25_Result_Panel_Click_on_Bubble">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:stagingURL.TC25_Result_Panel_Click_on_Bubble@4667ae56]" name="setUp" is-config="true" duration-ms="1963" started-at="2017-03-16T18:10:31Z" finished-at="2017-03-16T18:10:33Z">
           <params>
             <param index="0">
               <value>
@@ -23,37 +23,37 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="no_changes_to_search_filters_based_on_the_map_movement()[pri:0, instance:stagingURL.TC18_No_changes_to_search_filters_based_on_the_map_movement@4667ae56]" name="no_changes_to_search_filters_based_on_the_map_movement" duration-ms="34046" started-at="2017-03-15T18:29:06Z" finished-at="2017-03-15T18:29:40Z">
+        <test-method status="PASS" signature="result_Panel_Click_on_Bubble()[pri:0, instance:stagingURL.TC25_Result_Panel_Click_on_Bubble@4667ae56]" name="result_Panel_Click_on_Bubble" duration-ms="50653" started-at="2017-03-16T18:10:33Z" finished-at="2017-03-16T18:11:24Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- no_changes_to_search_filters_based_on_the_map_movement -->
-        <test-method status="PASS" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:stagingURL.TC18_No_changes_to_search_filters_based_on_the_map_movement@4667ae56]" name="handleTestMethodName" is-config="true" duration-ms="0" started-at="2017-03-15T18:29:06Z" finished-at="2017-03-15T18:29:06Z">
+        </test-method> <!-- result_Panel_Click_on_Bubble -->
+        <test-method status="PASS" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:stagingURL.TC25_Result_Panel_Click_on_Bubble@4667ae56]" name="handleTestMethodName" is-config="true" duration-ms="0" started-at="2017-03-16T18:10:33Z" finished-at="2017-03-16T18:10:33Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void stagingURL.TC18_No_changes_to_search_filters_based_on_the_map_movement.no_changes_to_search_filters_based_on_the_map_movement() throws java.lang.InterruptedException,java.io.IOException]]>
+                <![CDATA[public void stagingURL.TC25_Result_Panel_Click_on_Bubble.result_Panel_Click_on_Bubble() throws java.lang.InterruptedException,java.io.IOException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- handleTestMethodName -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:stagingURL.TC18_No_changes_to_search_filters_based_on_the_map_movement@4667ae56]" name="getResult" is-config="true" duration-ms="116" started-at="2017-03-15T18:29:40Z" finished-at="2017-03-15T18:29:40Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:stagingURL.TC25_Result_Panel_Click_on_Bubble@4667ae56]" name="getResult" is-config="true" duration-ms="186" started-at="2017-03-16T18:11:24Z" finished-at="2017-03-16T18:11:24Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=no_changes_to_search_filters_based_on_the_map_movement status=SUCCESS method=TC18_No_changes_to_search_filters_based_on_the_map_movement.no_changes_to_search_filters_based_on_the_map_movement()[pri:0, instance:stagingURL.TC18_No_changes_to_search_filters_based_on_the_map_movement@4667ae56] output={null}]]]>
+                <![CDATA[[TestResult name=result_Panel_Click_on_Bubble status=SUCCESS method=TC25_Result_Panel_Click_on_Bubble.result_Panel_Click_on_Bubble()[pri:0, instance:stagingURL.TC25_Result_Panel_Click_on_Bubble@4667ae56] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:stagingURL.TC18_No_changes_to_search_filters_based_on_the_map_movement@4667ae56]" name="tearDown" is-config="true" duration-ms="259" started-at="2017-03-15T18:29:40Z" finished-at="2017-03-15T18:29:40Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:stagingURL.TC25_Result_Panel_Click_on_Bubble@4667ae56]" name="tearDown" is-config="true" duration-ms="298" started-at="2017-03-16T18:11:24Z" finished-at="2017-03-16T18:11:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- stagingURL.TC18_No_changes_to_search_filters_based_on_the_map_movement -->
+      </class> <!-- stagingURL.TC25_Result_Panel_Click_on_Bubble -->
     </test> <!-- TestSuite -->
   </suite> <!-- Single -->
 </testng-results>

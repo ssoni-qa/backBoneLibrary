@@ -5,15 +5,15 @@
     <parameter name="environment" value="chrome"/>
     <parameter name="config" value="single.webdriver.conf.json"/>
     <classes>
-      <class name="stagingQA1.QA14_Moving_the_map_by_dragging">
+      <class name="stagingURL.TC23_Zoom_out">
         <methods>
-          <include name="moving_the_map_by_dragging"/>
           <include name="handleTestMethodName"/>
           <include name="getResult"/>
           <include name="tearDown"/>
+          <include name="TC23_Zoom_out"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- stagingQA1.QA14_Moving_the_map_by_dragging -->
+      </class> <!-- stagingURL.TC23_Zoom_out -->
     </classes>
   </test> <!-- TestSuite(failed) -->
 </suite> <!-- Failed suite [Single] -->

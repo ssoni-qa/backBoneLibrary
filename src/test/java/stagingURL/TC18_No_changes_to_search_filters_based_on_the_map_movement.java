@@ -38,9 +38,9 @@ public class TC18_No_changes_to_search_filters_based_on_the_map_movement extends
 
 		System.out.println("Verification Step :1. To verify the postal/ city state/province search address- "
 				+ "country and selected criteria do not change based on the map interactions.");
+		for (String stagingURL:OpenStreetMapLocatorPage.stagingURL) {
+			try {
 
-		try {
-			for (String stagingURL:OpenStreetMapLocatorPage.stagingURL) {
 				//
 				test18 = extent.startTest("No changes to search filters based on the map movement.",
 						"To verify the Map is moving around by dragging it or not.");
@@ -92,8 +92,6 @@ public class TC18_No_changes_to_search_filters_based_on_the_map_movement extends
 
 				Thread.sleep(3000);
 
-
-
 				if (addtxt.getAttribute("value").contains("Arlington Heights  IL 60006") 
 
 						&& selectedCountry.getText().contains("United States Of America")
@@ -113,20 +111,18 @@ public class TC18_No_changes_to_search_filters_based_on_the_map_movement extends
 							+ test18.addScreenCapture(captureScreenMethod(dest)));
 				}
 
+
+
+				extent.endTest(test18);
+
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+
+				test18.log(LogStatus.FAIL, "Exception Occured. : " + e.getMessage() + " "
+						+ test18.addScreenCapture(captureScreenMethod(dest)));
 			}
-
-
-
-			extent.endTest(test18);
-
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-			test18.log(LogStatus.FAIL, "Exception Occured. : " + e.getMessage() + " "
-					+ test18.addScreenCapture(captureScreenMethod(dest)));
 		}
-
 
 	}
 
