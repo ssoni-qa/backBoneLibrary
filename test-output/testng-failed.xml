@@ -5,15 +5,15 @@
     <parameter name="environment" value="chrome"/>
     <parameter name="config" value="single.webdriver.conf.json"/>
     <classes>
-      <class name="stagingURL.TC23_Zoom_out">
+      <class name="stagingURL.TC30_Send_Location_details_to_email_address">
         <methods>
-          <include name="handleTestMethodName"/>
           <include name="getResult"/>
+          <include name="handleTestMethodName"/>
+          <include name="send_location_details_to_email_address"/>
           <include name="tearDown"/>
-          <include name="TC23_Zoom_out"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- stagingURL.TC23_Zoom_out -->
+      </class> <!-- stagingURL.TC30_Send_Location_details_to_email_address -->
     </classes>
   </test> <!-- TestSuite(failed) -->
 </suite> <!-- Failed suite [Single] -->

@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="stagingQA1.QA1_To_verify_page_load_on_browser">
+      <class name="stagingURL.TC26_Get_direction_button">
         <methods>
-          <include name="verify_page_load_on_browser"/>
+          <include name="get_Direction_Button"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- stagingQA1.QA1_To_verify_page_load_on_browser -->
+      </class> <!-- stagingURL.TC26_Get_direction_button -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

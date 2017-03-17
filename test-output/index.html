@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Single">
-              <span class="suite-name border-passed">Single</span>
+              <span class="suite-name border-failed">Single</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Single" class="hide-methods passed suite-Single"> (hide)</a> <!-- hide-methods passed suite-Single -->
-                      <a href="#" panel-name="suite-Single" class="show-methods passed suite-Single"> (show)</a> <!-- show-methods passed suite-Single -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Single" class="hide-methods failed suite-Single"> (hide)</a> <!-- hide-methods failed suite-Single -->
+                      <a href="#" panel-name="suite-Single" class="show-methods failed suite-Single"> (show)</a> <!-- show-methods failed suite-Single -->
                     </span>
-                    <div class="method-list-content passed suite-Single">
+                    <div class="method-list-content failed suite-Single">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Single" title="stagingURL.TC25_Result_Panel_Click_on_Bubble" hash-for-method="result_Panel_Click_on_Bubble">result_Panel_Click_on_Bubble</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Single" title="stagingURL.TC30_Send_Location_details_to_email_address" hash-for-method="send_location_details_to_email_address">send_location_details_to_email_address</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Single -->
+                    </div> <!-- method-list-content failed suite-Single -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,21 +117,38 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Single" class="panel Single">
-          <div class="suite-Single-class-passed">
+          <div class="suite-Single-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">stagingURL.TC25_Result_Panel_Click_on_Bubble</span>
+              <img src="failed.png"/>
+              <span class="class-name">stagingURL.TC30_Send_Location_details_to_email_address</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="result_Panel_Click_on_Bubble">
-                  </a> <!-- result_Panel_Click_on_Bubble -->
-                  <span class="method-name">result_Panel_Click_on_Bubble</span>
+                  <a name="send_location_details_to_email_address">
+                  </a> <!-- send_location_details_to_email_address -->
+                  <span class="method-name">send_location_details_to_email_address</span>
+                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
+	expected [Your results have been sent to your e-mail address.
+
+Thanks!] but found [Your results have been sent to your e-mail address.
+
+ Thanks!],
+	expected [Your results have been sent to your e-mail address.
+
+Thanks!] but found [Your results have been sent to your e-mail address.
+
+ Thanks!]
+	at stagingURL.TC30_Send_Location_details_to_email_address.send_location_details_to_email_address(TC30_Send_Location_details_to_email_address.java:117)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 11 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Single-class-passed -->
+          </div> <!-- suite-Single-class-failed -->
         </div> <!-- panel Single -->
         <div panel-name="test-xml-Single" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -146,7 +163,7 @@
     &lt;parameter name=&quot;environment&quot; value=&quot;chrome&quot;/&gt;
     &lt;parameter name=&quot;config&quot; value=&quot;single.webdriver.conf.json&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;stagingURL.TC25_Result_Panel_Click_on_Bubble&quot;/&gt;
+      &lt;class name=&quot;stagingURL.TC30_Send_Location_details_to_email_address&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- TestSuite --&gt;
 &lt;/suite&gt; &lt;!-- Single --&gt;
@@ -188,14 +205,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'result_Panel_Click_on_Bubble')
-data.setCell(0, 2, 'stagingURL.TC25_Result_Panel_Click_on_Bubble')
-data.setCell(0, 3, 50653);
+data.setCell(0, 1, 'send_location_details_to_email_address')
+data.setCell(0, 2, 'stagingURL.TC30_Send_Location_details_to_email_address')
+data.setCell(0, 3, 56771);
 window.suiteTableData['Single']= { tableData: data, tableDiv: 'times-div-Single'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 50 seconds</span>
+              <span class="suite-total-time">Total running time: 56 seconds</span>
               <div id="times-div-Single">
               </div> <!-- times-div-Single -->
             </div> <!-- times-div -->
@@ -221,26 +238,28 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">stagingURL.TC25_Result_Panel_Click_on_Bubble</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">stagingURL.TC30_Send_Location_details_to_email_address</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(single.webdriver.conf.json, chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">handleTestMethodName(public void stagingURL.TC25_Result_Panel_Click_on_Bubble.result_Panel_Click_on_Bubble() throws java....)</span>
-                <span class="method-start">1963 ms</span>
+                <span class="method-name">handleTestMethodName(public void stagingURL.TC30_Send_Location_details_to_email_address.send_location_details_to_email_ad...)</span>
+                <span class="method-start">2359 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">result_Panel_Click_on_Bubble</span>
-                <span class="method-start">1963 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">send_location_details_to_email_address</span>
+                <span class="method-start">2360 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">getResult([TestResult name=result_Panel_Click_on_Bubble status=SUCCESS method=TC25_Result_Panel_Click_on_Bubbl...)</span>
-                <span class="method-start">52618 ms</span>
+                <span class="method-name">getResult</span>
+                <span class="method-start">59135 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">52804 ms</span>
+                <span class="method-start">59897 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
