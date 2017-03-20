@@ -5,15 +5,15 @@
     <parameter name="environment" value="chrome"/>
     <parameter name="config" value="single.webdriver.conf.json"/>
     <classes>
-      <class name="stagingURL.TC30_Send_Location_details_to_email_address">
+      <class name="stagingURL.TC40_Header_Footer_links">
         <methods>
           <include name="getResult"/>
+          <include name="eader_Footer_links"/>
           <include name="handleTestMethodName"/>
-          <include name="send_location_details_to_email_address"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- stagingURL.TC30_Send_Location_details_to_email_address -->
+      </class> <!-- stagingURL.TC40_Header_Footer_links -->
     </classes>
   </test> <!-- TestSuite(failed) -->
 </suite> <!-- Failed suite [Single] -->

@@ -5,7 +5,7 @@
 		<parameter name="config" value="single.webdriver.conf.json" />
 		<parameter name="environment" value="chrome" />
 		<classes>
-			<class name="stagingURL.TC30_Send_Location_details_to_email_address" />
+			<class name="stagingURL.TC40_Header_Footer_links" />
 
 			<!-- <class name="stagingQA1.QA1_To_verify_page_load_on_browser" /> <class 
 				name="stagingQA1.QA2_To_verify_regionalmap_presented_on_page_load" /> <class 

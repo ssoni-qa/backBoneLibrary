@@ -101,7 +101,7 @@ public class BrowserStackTestNGTest {
 	{
 		TakesScreenshot ts=(TakesScreenshot)driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
-		dest=System.getProperty("user.dir") +"//etestReport//"+this.testName+".png";
+		dest=System.getProperty("user.dir") +"//etestReport//"+System.currentTimeMillis()+".png";
 	    destination = new File(dest);
 		FileUtils.copyFile(source, destination);
 		Path p = Paths.get(dest);
