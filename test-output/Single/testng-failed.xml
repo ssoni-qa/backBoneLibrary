@@ -5,15 +5,13 @@
     <parameter name="environment" value="chrome"/>
     <parameter name="config" value="single.webdriver.conf.json"/>
     <classes>
-      <class name="stagingURL.TC40_Header_Footer_links">
+      <class name="stagingURL.TC1_To_verify_page_load_on_browser">
         <methods>
-          <include name="getResult"/>
-          <include name="eader_Footer_links"/>
-          <include name="handleTestMethodName"/>
+          <include name="verify_page_load_on_browser"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- stagingURL.TC40_Header_Footer_links -->
+      </class> <!-- stagingURL.TC1_To_verify_page_load_on_browser -->
     </classes>
   </test> <!-- TestSuite(failed) -->
 </suite> <!-- Failed suite [Single] -->

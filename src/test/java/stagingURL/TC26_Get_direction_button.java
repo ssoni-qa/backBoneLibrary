@@ -50,7 +50,6 @@ public class TC26_Get_direction_button extends BrowserStackTestNGTest
 								+ " Map should show highlighted routed corresponding to directions.");
 
 				test26.log(LogStatus.INFO, "Staging Url :"+stagingURL);
-
 				System.out.println("Staging URL :"+stagingURL);
 
 				//Initializing WebElemrnt from Page Factory.
@@ -74,38 +73,43 @@ public class TC26_Get_direction_button extends BrowserStackTestNGTest
 				wc.until(ExpectedConditions.textToBePresentInElement(By.xpath("//h3"), "Directions"));
 
 				//Validating Start and EndPoint
-
+                System.out.println("TC 26.1: Check for valid Start and End address points.");
+                test26.log(LogStatus.INFO, "TC 26.1: Check for valid Start and End address points.");
 				if(driver.findElement(By.xpath("//*[@class='maneuver_start']")).getText().contains("From (A): Arlington Heights IL 60006")
 						&& driver.findElement(By.xpath("//*[@class='maneuver_end']")).getText().contains("To (B): Arlington Heights IL 60005"))
 				{
 
-					System.out.println("Pass: Valid Start and End  Point.");
-					test26.log(LogStatus.PASS, "Valid Start and End  Point located.");
+					System.out.println("Pass.");
+					test26.log(LogStatus.PASS, "Pass.");
 
 				}
 				else
 				{
-					System.out.println("Fail : Invalid Start and End Point is found.");
-					test26.log(LogStatus.FAIL, "Invalid Start and End Point is found. "
+					System.out.println("Fail.");
+					test26.log(LogStatus.FAIL, "Fail."
 							+ test26.addScreenCapture(captureScreenMethod(dest)));
 				}
 
 				// Milege for each step and total distance.
+				System.out.println("TC 26.2: Check for valid Milege for each step and total distance.");
+                test26.log(LogStatus.INFO, "TC 26.2: Check for valid Milege for each step and total distance.");
 				if(driver.findElement(By.xpath("//*[@class='poi maneuver']/p[2]")).getText()
 						.contains("Distance: 0.8 miles. Drive time: 2 minutes"))
 				{
-					System.out.println("Pass: Valid total Drive time and Distance.");
-					test26.log(LogStatus.PASS, "Valid total Drive time and Distance.");
+					System.out.println("Pass");
+					test26.log(LogStatus.PASS, "Pass.");
 
 				}
 				else
 				{
-					System.out.println("Fail : Invalid total Drive time and Distance.");
-					test26.log(LogStatus.FAIL, "Invalid total Drive time and Distance."
+					System.out.println("Fail.");
+					test26.log(LogStatus.FAIL, "Fail."
 							+ test26.addScreenCapture(captureScreenMethod(dest)));
 				}
 
 				//Valid Test step turn.
+				System.out.println("TC 26.3: Check for Valid Test step turn.");
+                test26.log(LogStatus.INFO, "TC 26.3: Check for Valid Test step turn.");
 				if(driver.findElement(By.xpath("//*[@class='content-list maneuver-result']/li[1]")).getText()
 						.contains("1 Start out on W Euclid Ave (Going East) 0.07 miles"))
 					if(driver.findElement(By.xpath("//*[@class='content-list maneuver-result']/li[2]")).getText()
@@ -113,14 +117,14 @@ public class TC26_Get_direction_button extends BrowserStackTestNGTest
 						if(driver.findElement(By.xpath("//*[@class='content-list maneuver-result']/li[3]")).getText()
 								.contains("3 Turn RIGHT onto Evergreen Ave (Going South) 0.06 miles"))
 						{
-							System.out.println("Pass: Valid Step direction.");
-							test26.log(LogStatus.PASS, "Valid Step direction.");
+							System.out.println("Pass.");
+							test26.log(LogStatus.PASS, "Pass.");
 
 						}
 						else
 						{
-							System.out.println("Fail : Invalid Valid Step direction.");
-							test26.log(LogStatus.FAIL, "Invalid Valid Step direction."
+							System.out.println("Fail.");
+							test26.log(LogStatus.FAIL, "Fail."
 									+ test26.addScreenCapture(captureScreenMethod(dest)));
 						}
 
@@ -139,7 +143,7 @@ public class TC26_Get_direction_button extends BrowserStackTestNGTest
 	@AfterMethod
 	public void getResult(ITestResult result)
 	{
-		test26.log(LogStatus.INFO, "TC 25 executed succesfully.");
+		test26.log(LogStatus.INFO, "TC 26 executed succesfully.");
 
 		System.out.println("------------------------------------------------------------------------------------");
 

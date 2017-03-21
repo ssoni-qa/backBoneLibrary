@@ -4,12 +4,10 @@ import java.io.IOException;
 import java.lang.reflect.Method;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -19,7 +17,6 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 import browserStackTestNG.BrowserStackTestNGTest;
-import junit.framework.AssertionFailedError;
 import page.OpenStreetMapLocatorPage;
 
 public class TC33_Search_radius_selection extends BrowserStackTestNGTest
@@ -35,16 +32,16 @@ public class TC33_Search_radius_selection extends BrowserStackTestNGTest
 	@Test
 	public void search_radius_selection() throws InterruptedException, IOException ,Exception
 	{
-		System.out.println("Test Objective : To verify whether search results are expanding until at least "
-				+ "one results is found based on radius selected. Client can set radius defaults.");
+		try {
+			System.out.println("Test Objective : To verify whether search results are expanding until at least "
+					+ "one results is found based on radius selected. Client can set radius defaults.");
 
-		System.out.println("Verification Step :1. Verify that the results return are within the said desired"
-				+ " mileage. "
-				+ "Conduct search again for increased radius and decreased radius, confirm mileage distance changes accordingly. "
-				+ "Additional desired location details must be specified by client.");
+			System.out.println("Verification Step :1. Verify that the results return are within the said desired"
+					+ " mileage. "
+					+ "Conduct search again for increased radius and decreased radius, confirm mileage distance changes accordingly. "
+					+ "Additional desired location details must be specified by client.");
 
-		for (String stagingURL:OpenStreetMapLocatorPage.stagingURL) {
-			try {
+			for (String stagingURL:OpenStreetMapLocatorPage.stagingURL) {
 
 				//
 				test33 = extent.startTest("Test Objective : To verify whether search results are expanding until at least "
@@ -98,25 +95,20 @@ public class TC33_Search_radius_selection extends BrowserStackTestNGTest
 				} catch (AssertionError e) {
 					System.out.println("FAIL :"+e.getMessage());
 					test33.log(LogStatus.FAIL, "Fail : " + e.getMessage() + " "
-							+ test33.addScreenCapture(captureScreenMethod(dest)));	
+							+ test33.addScreenCapture(captureScreenMethod(dest)));
 				}
 
-			} catch ( Exception e) {
-				System.out.println("Excpetion Occured.");
-				test33.log(LogStatus.FAIL, "Exception Occured. : " + e.getMessage() + " "
-						+ test33.addScreenCapture(captureScreenMethod(dest)));
+
 			}
+		} catch ( Exception e) {
+			System.out.println("Excpetion Occured.");
+			test33.log(LogStatus.FAIL, "Exception Occured. : " + e.getMessage() + " "
+					+ test33.addScreenCapture(captureScreenMethod(dest)));
 		}
 		extent.endTest(test33);
+
 	}
-	private boolean isElementPresent(By by) {
-		try {
-			driver.findElement(by);
-			return true;
-		} catch (NoSuchElementException e) {
-			return false;
-		}
-	}
+
 
 	@AfterMethod
 	public void getResult()

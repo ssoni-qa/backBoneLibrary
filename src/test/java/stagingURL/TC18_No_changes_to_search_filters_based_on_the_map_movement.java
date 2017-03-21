@@ -92,27 +92,27 @@ public class TC18_No_changes_to_search_filters_based_on_the_map_movement extends
 
 				Thread.sleep(3000);
 
+				//Test Cases.
+				System.out.println("TC 18.1 :Check results if changed based on new search on Map Pan, should still reflect the select criteria of Client Design.");
+				test18.log(LogStatus.INFO, "TC 18.1 :Check results if changed based on new search on Map Pan, should still reflect the select criteria of Client Design.");
 				if (addtxt.getAttribute("value").contains("Arlington Heights  IL 60006") 
 
 						&& selectedCountry.getText().contains("United States Of America")
 
 						&& selectedRadius.getText().contains("15")) {
 
-					System.out.println("Pass: TC 18");
+					System.out.println("Pass");
 
-					test18.log(LogStatus.PASS, "No changes to search filters based on the map movement");
+					test18.log(LogStatus.PASS, "Pass.");
 
 				} 
 				else
 				{
-					System.out.println("Fail : TC 18");
+					System.out.println("Fail.");
 
-					test18.log(LogStatus.FAIL, "No changes to search filters based on the map movement." 
+					test18.log(LogStatus.FAIL, "Fail" 
 							+ test18.addScreenCapture(captureScreenMethod(dest)));
 				}
-
-
-
 				extent.endTest(test18);
 
 			} catch (Exception e) {

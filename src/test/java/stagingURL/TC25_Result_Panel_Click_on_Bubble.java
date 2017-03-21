@@ -1,5 +1,7 @@
 package stagingURL;
 
+import static org.testng.Assert.assertEquals;
+
 import java.io.IOException;
 import java.lang.reflect.Method;
 
@@ -70,13 +72,20 @@ public class TC25_Result_Panel_Click_on_Bubble extends BrowserStackTestNGTest
 				driver.findElement(By.linkText("Yong_test")).click();
 
 				Thread.sleep(5000);
+				
+				System.out.println("TC 25.1 :Check The location details in the bubble should be the same as it is shown in the result panel.");
+				test25.log(LogStatus.INFO, "TC 25.1 :Check The location details in the bubble should be the same as it is shown in the result panel.");
+				String rightPanel = driver.findElement(By.xpath("//li/div[2]/div")).getText();
+			    String resultBubble = driver.findElement(By.xpath("//div[2]/div/div/div/div/div/div/ul/li[3]")).getText();
 
 				try {
-					driver.findElement(By.xpath("//*[@class='tab-content active']"));
-					System.out.println("TC 25 Pass : Location details bubbles is showed.");
-					test25.log(LogStatus.PASS, "Location details bubbles is showed.");
-				} catch (Exception e) {
-					System.out.println("TC 25 Fail : Location details bubbles is showed.");
+					assertEquals(rightPanel, resultBubble);			
+					System.out.println("Pass.");
+					test25.log(LogStatus.PASS, "Pass.");
+				} catch (AssertionError e) {
+					System.out.println("Fail.");
+					test25.log(LogStatus.FAIL, "Fail" + e.getMessage() + " "
+							+ test25.addScreenCapture(captureScreenMethod(dest)));
 				}
 
 				extent.endTest(test25);

@@ -1,5 +1,7 @@
 package stagingURL;
 
+import static org.testng.Assert.assertEquals;
+
 import java.io.IOException;
 import java.lang.reflect.Method;
 
@@ -22,7 +24,7 @@ import page.OpenStreetMapLocatorPage;
 
 public class TC5_Special_characters_in_the_search_textbox extends BrowserStackTestNGTest
 {
-	ExtentTest testqa5 ;
+	ExtentTest test5 ;
 	@BeforeMethod
 	public void handleTestMethodName(Method method)
 	{
@@ -41,13 +43,13 @@ public class TC5_Special_characters_in_the_search_textbox extends BrowserStackTe
 
 			try {
 
-				testqa5 = extent.startTest("Special characters in the search textbox.",
+				test5 = extent.startTest("Special characters in the search textbox.",
 						"To verify whether the appropriate error message is displayed or not, if we give only special characters.");
 
-				testqa5.log(LogStatus.INFO,
+				test5.log(LogStatus.INFO,
 						"An error message 'Your search must not include '!#$%^*().' should be displayed.");
 
-				testqa5.log(LogStatus.INFO, "Staging URL: "+stagingURL);
+				test5.log(LogStatus.INFO, "Staging URL: "+stagingURL);
 
 				System.out.println("Staging URL :"+stagingURL);
 
@@ -71,38 +73,38 @@ public class TC5_Special_characters_in_the_search_textbox extends BrowserStackTe
 
 				wc.until(ExpectedConditions.elementToBeClickable(onPage.closeButton));
 
-				if (driver.findElement(By.xpath("//*[@class='modal']/p")).getText()
-						.equals("Your search must not include !$%^*()")) 
-				{
-					System.out.println("Pass: Test QA5");
+				//Test Case
 
-					testqa5.log(LogStatus.PASS, "An error message is showned.");
-
-				} else {
-
-					System.out.println("Fails :Test QA5");
-
-					testqa5.log(LogStatus.FAIL, "An error message is not showned.");
-
-					testqa5.log(LogStatus.FAIL, "Test Case Fails:. : " 
-							+ testqa5.addScreenCapture(captureScreenMethod(dest)));
+				System.out.println("TC 5.1 :An error message 'Your search must not include '!#$%^*().' should be displayed.");
+				test5.log(LogStatus.INFO, "TC 5.1 :An error message 'Your search must not include '!#$%^*().' should be displayed.");
+				
+				try {
+					assertEquals(driver.findElement(By.xpath("//*[@class='modal']/p")).getText(), "Your search must not include !$%^*()");
+					System.out.println("Pass.");
+					test5.log(LogStatus.PASS, "Pass.");
+				} catch (Exception e) {
+					e.printStackTrace();
+					System.out.println("Fail.");
+					test5.log(LogStatus.FAIL, "Fail." +e.getMessage()
+					+ test5.addScreenCapture(captureScreenMethod(dest)));
 				}
+				
 
-				extent.endTest(testqa5);
+				extent.endTest(test5);
 
 			} catch (Exception e) {
 
 				e.printStackTrace();
 
-				testqa5.log(LogStatus.FAIL, "Exception Occured. : " + e.getMessage() + " "
-						+ testqa5.addScreenCapture(captureScreenMethod(dest)));
+				test5.log(LogStatus.FAIL, "Exception Occured. : " + e.getMessage() + " "
+						+ test5.addScreenCapture(captureScreenMethod(dest)));
 			} 
 		}
 	}
 	@AfterMethod
 	public void getResult(ITestResult result)
 	{
-		testqa5.log(LogStatus.INFO, "TC QA5 executed succesfully.");
+		test5.log(LogStatus.INFO, "TC 5 exceuted.");
 
 		System.out.println("------------------------------------------------------------------------------------");
 

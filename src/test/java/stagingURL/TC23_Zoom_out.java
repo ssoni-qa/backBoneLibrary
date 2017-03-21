@@ -32,7 +32,7 @@ public class TC23_Zoom_out extends BrowserStackTestNGTest
 
 	}
 	@Test
-	public void TC23_Zoom_out() throws InterruptedException, IOException
+	public void zoom_out() throws InterruptedException, IOException
 	{
 		System.out.println("Test Objective : Zoom out by clicking on the zoom in button (minus sign).");
 
@@ -65,13 +65,17 @@ public class TC23_Zoom_out extends BrowserStackTestNGTest
 
 				WebElement zoomSlider=driver.findElement(By.xpath("//*[@class='ol-zoomslider-thumb ol-unselectable']"));
 
+				//Test Cases.
+				System.out.println("TC 23.1 :The map should zoom in smoothly and it should stop zooming in "
+								+ "after certain limit (once the zoom level indicator reaches the highest).");
+                test23.log(LogStatus.INFO, "TC 23.1 :The map should zoom in smoothly and it should stop zooming in ");
 
 				while(!zoomSlider.getCssValue("top").contains("145px"))
 				{
 					driver.findElement(By.id("OpenLayers_Control_PanZoom_zoomout_innerImage")).click();
 				}
-				System.out.println("TC 22 Pass : Zoom levele indicator reaches the highest.");
-				test23.log(LogStatus.PASS, "Zoom levele indicator reaches the highest.");
+				System.out.println("Pass.");
+				test23.log(LogStatus.PASS, "Pass.");
 				extent.endTest(test23);
 
 			} catch (Exception e) {

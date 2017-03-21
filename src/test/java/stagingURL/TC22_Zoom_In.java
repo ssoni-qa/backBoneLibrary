@@ -64,24 +64,25 @@ public class TC22_Zoom_In extends BrowserStackTestNGTest
 
 
 				WebElement zoomSlider=driver.findElement(By.xpath("//*[@class='ol-zoomslider-thumb ol-unselectable']"));
-
-
+                
+				//Test Cases.
+				System.out.println("TC 22.1 :1. The map should zoom in smoothly and it should stop zooming in after certain limit (once the zoom level indicator reaches the highest).");
+                test22.log(LogStatus.INFO, "TC 22.1 :1. The map should zoom in smoothly and it should stop zooming in after certain limit (once the zoom level indicator reaches the highest).");
 				while(!zoomSlider.getCssValue("top").contains("0px"))
 				{
 					driver.findElement(By.id("OpenLayers_Control_PanZoom_zoomin_innerImage")).click();
 				}
-				System.out.println("TC 22 Pass : Zoom levele indicator reaches the highest.");
-				test22.log(LogStatus.PASS, "Zoom levele indicator reaches the highest.");
-				extent.endTest(test22);
+				System.out.println("Pass.");
+				test22.log(LogStatus.PASS, "Pass.");
 
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-
 				test22.log(LogStatus.FAIL, "Exception Occured. : " + e.getMessage() + " "
 						+ test22.addScreenCapture(captureScreenMethod(dest)));
 			}
 		}
+		extent.endTest(test22);
 
 	}
 

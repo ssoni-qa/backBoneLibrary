@@ -2,7 +2,7 @@ package stagingURL;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
-import org.openqa.selenium.NoSuchElementException;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -19,13 +19,13 @@ import page.OpenStreetMapLocatorPage;
 
 public class TC1_To_verify_page_load_on_browser extends BrowserStackTestNGTest
 {
-	ExtentTest testQA1 ;
+	ExtentTest test1 ;
+	
 
 	@BeforeMethod
 	public void handleTestMethodName(Method method)
 	{
-		testName = method.getName(); 
-
+		testName = method.getName();
 	}
 	@Test
 	public void verify_page_load_on_browser() throws InterruptedException, IOException
@@ -39,14 +39,14 @@ public class TC1_To_verify_page_load_on_browser extends BrowserStackTestNGTest
 		for (String stagingURL:OpenStreetMapLocatorPage.stagingURL) {
 			try {
 				//
-				testQA1 = extent.startTest("QA 1: Page Load, GeoIP and Cursor position", 
+				test1 = extent.startTest("QA 1: Page Load, GeoIP and Cursor position", 
 						"To verify page loads on browser.");
-				testQA1.log(LogStatus.INFO,
+				test1.log(LogStatus.INFO,
 						"Verification Steps :The page should load, if GeoIP detection on, " + "should attemp to determine location, "
 								+ "if geoIP off, then request address information."
 								+ "2. By default the cursor position should be in the search text box.");
 
-				testQA1.log(LogStatus.INFO, "Staging Url :"+stagingURL);
+				test1.log(LogStatus.INFO, "Staging Url :"+stagingURL);
 
 				System.out.println("Staging URL :"+stagingURL);
 
@@ -56,48 +56,57 @@ public class TC1_To_verify_page_load_on_browser extends BrowserStackTestNGTest
 
 
 				//Getting aut url.
-				driver.get(stagingURL);
+				driver.get("http://zeus.dev.where2getit.com/yong_test/backbone.QA1.html");
 
 				WebElement addtxt = onPage.addressSearch;
 
 				wc.until(ExpectedConditions.textToBePresentInElementValue(addtxt, "Arlington Heights  IL 60006"));
 
-				//Verify Page Load on browser
-				if (driver.getTitle().equals("Problem loading page")) {
+				//TC 1.1
 
-					System.out.println("Fail: Error in loading Page.");
+				System.out.println("TC 1 : Check page loaded on browser.");
 
-					testQA1.log(LogStatus.FAIL,
-							"Error in loading Page. : " + testQA1.addScreenCapture(captureScreenMethod(dest)));
+				test1.log(LogStatus.INFO, "TC 1 : Check page loaded on browser.");
+
+				if (driver.getTitle().contains("Problem in loading page.")) {
+					System.out.println("Fail.");
+
+					test1.log(LogStatus.FAIL,
+							"Failure ScrrenShots:" + test1.addScreenCapture(captureScreenMethod(dest)));
 
 				} else {
 
-					System.out.println("Pass:Page loaded succesfully.");
+					System.out.println("Pass");
 
-					testQA1.log(LogStatus.PASS, "Page loaded succesfully.");
+					test1.log(LogStatus.PASS, "Pass.");
 
 				}
+
+				//TC 1.2
+
+				System.out.println("TC 1.2 :Validate if GEoIP is 'ON' , location is detected.");
+				test1.log(LogStatus.INFO, "TC 1.2 :Validate if GEoIP is 'ON' , location is detected.");
 
 				if (!onPage.addressSearch.getAttribute("value").equals("")) {
+                    System.out.println(onPage.addressSearch.getAttribute("value"));
+					System.out.println("Pass.");
 
-					System.out.println("Pass: GeoIP is on , location is detected.");
-
-					testQA1.log(LogStatus.PASS, "GeoIP is on , location is detected.");
+					test1.log(LogStatus.PASS, "Pass.");
 
 				} else {
 
-					System.out.println("Fail:GeoIP is on , location is detected.");
+					System.out.println("Fail");
 
-					testQA1.log(LogStatus.FAIL, "GeoIP is on , location is detected. : "
-							+ testQA1.addScreenCapture(captureScreenMethod(dest)));
+					test1.log(LogStatus.FAIL, "Failure ScreenShots :"
+							+ test1.addScreenCapture(captureScreenMethod(dest)));
 				}
 
-				extent.endTest(testQA1);
+				extent.endTest(test1);
 
 			} catch (Exception e) {
 				e.printStackTrace();
-				testQA1.log(LogStatus.FAIL, "Exception Occured. : " + e.getMessage() + " "
-						+ testQA1.addScreenCapture(captureScreenMethod(dest)));
+				test1.log(LogStatus.FAIL, "Exception Occured. : " + e.getMessage() + " "
+						+ test1.addScreenCapture(captureScreenMethod(dest)));
 			} 
 		}
 
@@ -106,7 +115,7 @@ public class TC1_To_verify_page_load_on_browser extends BrowserStackTestNGTest
 	@AfterMethod
 	public void getResult(ITestResult result)
 	{
-		testQA1.log(LogStatus.INFO, "TC QA1 executed succesfully.");
+		System.out.println("TC 1 executed.");
 
 		System.out.println("------------------------------------------------------------------------------------");
 

@@ -1,8 +1,11 @@
 package stagingURL;
 
+import static org.testng.Assert.assertEquals;
+
 import java.io.IOException;
 import java.lang.reflect.Method;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -21,34 +24,35 @@ import page.OpenStreetMapLocatorPage;
 
 public class TC2_To_verify_regionalmap_presented_on_page_load extends BrowserStackTestNGTest
 {
-	ExtentTest testqa2 ;
+	ExtentTest test2 ;
 	@BeforeMethod
 	public void handleTestMethodName(Method method)
 	{
 		testName = method.getName(); 
 	}
 	@Test
-	public void verify_regionalmap_presented_on_page_load() throws InterruptedException, IOException
+	public void verify_regionalmap_presented_on_page_load() throws InterruptedException, IOException,Exception
 	{
-		System.out.println("QA 2 :Test Objective: To verify if the regional map is presented on page load. ");
+		System.out.println("Test Objective: To verify if the regional map is presented on page load. ");
 
 		System.out.println("Verification Step: 1. The map should reflect your current geographical location "
 				+ "or the geographical location of your IP address "
 				+ "( please note due to the VPN connection, "
 				+ "your IP address might not match your current location )");
 		for (String stagingURL:OpenStreetMapLocatorPage.stagingURL) {
+			
 			try {
-				testqa2 = extent.startTest("QA 2: GEOIP detected Map",
+				test2 = extent.startTest("GEOIP detected Map",
 						"To verify if the regional map is presented on page load");
-				testqa2.log(LogStatus.INFO, "Staging URL :"+stagingURL);
-				testqa2.log(LogStatus.INFO, "Verification Steps: The map should reflect your current geographical location or "
+				test2.log(LogStatus.INFO, "Staging URL :"+stagingURL);
+				test2.log(LogStatus.INFO, "Verification Steps: The map should reflect your current geographical location or "
 						+ "the geographical location of your IP address " + "( please note due to the VPN connection, "
 						+ "your IP address might not match your current office location )");
 				System.out.println("Staging URL :"+stagingURL);
 
 				//Initializing WebElemrnt from Page Factory.
 				OpenStreetMapLocatorPage onPage = PageFactory.initElements(driver, OpenStreetMapLocatorPage.class);
-				
+
 				//Getting aut url.
 				driver.get(stagingURL);
 
@@ -59,29 +63,33 @@ public class TC2_To_verify_regionalmap_presented_on_page_load extends BrowserSta
 				Select countrySelect = new Select(onPage.searchCountryOption);
 				WebElement selectedCountry = countrySelect.getFirstSelectedOption();
 
-				if (onPage.addressSearch.getAttribute("value").equals("Arlington Heights  IL 60006")
-						&& selectedCountry.getText().equals("United States Of America")) {
-					System.out.println("Pass: GEOIP detected Map.");
-					testqa2.log(LogStatus.PASS, "GEOIP detected Map.");
-				} else {
-					System.out.println("Fail:GEOIP detected Map");
-					testqa2.log(LogStatus.FAIL,
-							"Test Case Fail : " + testqa2.addScreenCapture(captureScreenMethod(dest)));
+				System.out.println("TC 2 : Check map should reflect your current geographical location.");
+				test2.log(LogStatus.INFO, "TC 2 : Check map should reflect your current geographical location.");
+
+				try {
+					assertEquals(onPage.addressSearch.getAttribute("value"), "Arlington Heights  IL 60006");
+					assertEquals(selectedCountry.getText(), "United States Of America");
+					System.out.println("Pass.");
+					test2.log(LogStatus.PASS, "Pass.");
+				} catch (AssertionError e) {
+					System.out.println("Fail.");
+					test2.log(LogStatus.FAIL, "Fail : " + e.getMessage() + " "
+							+ test2.addScreenCapture(captureScreenMethod(dest)));
 				}
-				extent.endTest(testqa2);
+
 
 			} catch (Exception e) {
-				e.printStackTrace();
-				testqa2.log(LogStatus.FAIL, "Exception Occured. : " + e.getMessage() + " "
-						+ testqa2.addScreenCapture(captureScreenMethod(dest)));
+				System.out.println("Exception Occured :"+e.getMessage());
+				test2.log(LogStatus.FAIL, "Exception Occured. : " + e.getMessage() + " "
+						+ test2.addScreenCapture(captureScreenMethod(dest)));
 			} 
 		}
+		extent.endTest(test2);
 
 	}
 	@AfterMethod
-	public void getResult(ITestResult result)
+	public void getResult()
 	{
-		testqa2.log(LogStatus.INFO, "TC QA2 executed succesfully.");
 		System.out.println("------------------------------------------------------------------------------------");
 		driver.quit();
 

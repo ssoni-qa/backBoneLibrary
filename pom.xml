@@ -22,7 +22,7 @@
 				<inherited>true</inherited>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>config/local.testng.xml</suiteXmlFile>
+						<suiteXmlFile>config/single.webdriver.testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>

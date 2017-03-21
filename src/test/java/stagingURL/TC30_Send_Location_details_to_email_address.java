@@ -165,8 +165,13 @@ public class TC30_Send_Location_details_to_email_address extends BrowserStackTes
 							+ test26.addScreenCapture(captureScreenMethod(dest)));				}
 			} catch ( Exception e) {
 				System.out.println("Excpetion Occured.");
-				test26.log(LogStatus.FAIL, "Exception Occured. : " + e.getMessage() + " "
-						+ test26.addScreenCapture(captureScreenMethod(dest)));
+				try {
+					test26.log(LogStatus.FAIL, "Exception Occured. : " + e.getMessage() + " "
+							+ test26.addScreenCapture(captureScreenMethod(dest)));
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		}
 		extent.endTest(test26);

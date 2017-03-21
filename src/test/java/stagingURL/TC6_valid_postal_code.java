@@ -22,7 +22,7 @@ import page.OpenStreetMapLocatorPage;
 
 public class TC6_valid_postal_code extends BrowserStackTestNGTest
 {
-	ExtentTest testqa6 ;
+	ExtentTest test6 ;
 	@BeforeMethod
 	public void handleTestMethodName(Method method)
 	{
@@ -42,13 +42,13 @@ public class TC6_valid_postal_code extends BrowserStackTestNGTest
 		for (String stagingURL:OpenStreetMapLocatorPage.stagingURL) {
 			try {
 
-				testqa6 = extent.startTest("Valid Postal Code.",
+				test6 = extent.startTest("Valid Postal Code.",
 						"To verify whether the correct search results are shown or not when valid ZIP codes are given into the search textbox.");
 
-				testqa6.log(LogStatus.INFO,
+				test6.log(LogStatus.INFO,
 						"The search results should be displayed for that postaclcode area or within the appropriate proximity of that postal code area or an error message should be displayed if the store is not there in that area.");
 
-				testqa6.log(LogStatus.INFO, "Staging URL: "+stagingURL);
+				test6.log(LogStatus.INFO, "Staging URL: "+stagingURL);
 
 				System.out.println("Staging URL :"+stagingURL);
 
@@ -72,34 +72,37 @@ public class TC6_valid_postal_code extends BrowserStackTestNGTest
 
 				Thread.sleep(3000);
 
+				//Test Cases.
+
+				System.out.println("TC 6.1 :To verify whether the correct search results are shown or not when valid ZIP codes are given into the search textbox. ");
+				test6.log(LogStatus.INFO, "TC 6.1 :To verify whether the correct search results are shown or not when valid ZIP codes are given into the search textbox. ");
 				if (driver.findElement(By.xpath("//h3")).getText().contains("locations found")) {
 
-					System.out.println("Pass: Test QA6");
+					System.out.println("Pass");
 
-					testqa6.log(LogStatus.PASS, "Location found under provided zip code.");
+					test6.log(LogStatus.PASS, "Pass.");
 
 				} else {
 
-					System.out.println("Fails :Test QA5");
+					System.out.println("Fail.");
+					test6.log(LogStatus.FAIL, "Fail." 
+							+ test6.addScreenCapture(captureScreenMethod(dest)));				}
 
-					testqa6.log(LogStatus.FAIL, "Location is not found under provided zip code.");
-				}
-
-				extent.endTest(testqa6);
+				extent.endTest(test6);
 
 			} catch (Exception e) {
 
 				e.printStackTrace();
 
-				testqa6.log(LogStatus.FAIL, "Exception Occured. : " + e.getMessage() + " "
-						+ testqa6.addScreenCapture(captureScreenMethod(dest)));
+				test6.log(LogStatus.FAIL, "Exception Occured. : " + e.getMessage() + " "
+						+ test6.addScreenCapture(captureScreenMethod(dest)));
 			} 
 		}
 	}
 	@AfterMethod
 	public void getResult(ITestResult result)
 	{
-		testqa6.log(LogStatus.INFO, "TC QA6 executed succesfully.");
+		test6.log(LogStatus.INFO, "Test cases executed.");
 
 		System.out.println("------------------------------------------------------------------------------------");
 

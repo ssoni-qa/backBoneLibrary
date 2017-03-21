@@ -39,20 +39,19 @@ public class TC14_Moving_the_map_by_dragging extends BrowserStackTestNGTest
 				+ " it is being dragged. 2. No error is thrown, if new search on pan on search active,"
 				+ " new results, if new search on pan 'off' then same results. ");
 
-		try {
-			for (String stagingURL:OpenStreetMapLocatorPage.stagingURL) {
+
+		for (String stagingURL:OpenStreetMapLocatorPage.stagingURL) {
+			try {
 				//
 				test14 = extent.startTest("Moving the map by dragging.",
 						"To verify the Map is moving around by dragging it or not.");
 
 				test14.log(LogStatus.INFO,
 						"1. The map should be moved freely in the direction it is being dragged. "
-						+ "2. No error is thrown, If new search on pan on search active, new results,"
-						+ " if new search on pan 'off' then same results.");
+								+ "2. No error is thrown, If new search on pan on search active, new results,"
+								+ " if new search on pan 'off' then same results.");
 
 				test14.log(LogStatus.INFO, "Staging Url :"+stagingURL);
-				
-
 
 				System.out.println("Staging URL :"+stagingURL);
 
@@ -91,20 +90,15 @@ public class TC14_Moving_the_map_by_dragging extends BrowserStackTestNGTest
 				{
 					try {
 						test14.log(LogStatus.INFO, "New Search on Map Pan.");
-
 						Thread.sleep(3000);
 						System.out.println(driver.findElement(By.xpath("//a[contains(text(), 'test 2')]")).getText());
 						System.out.println("Pass: TC 14 and TC 15");
 						test14.log(LogStatus.PASS, "PAN is ON , New result.");
-
-
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 						System.out.println("Fail : TC 14 and TC 15");
-
 						test14.log(LogStatus.FAIL, "PAN is ON , New result is not showing");
-
 						test14.log(LogStatus.FAIL, "PAN is ON , New result is not showing" 
 								+ test14.addScreenCapture(captureScreenMethod(dest)));
 					}
@@ -115,7 +109,7 @@ public class TC14_Moving_the_map_by_dragging extends BrowserStackTestNGTest
 					if (driver.findElement(By.xpath("//h3")).getText().contains("locations found")) {
 
 						System.out.println("Pass: TC 14 and TC 16");
-						
+
 						test14.log(LogStatus.PASS, "PAN is OFF , Same Result is showned.");
 
 					} 
@@ -126,19 +120,17 @@ public class TC14_Moving_the_map_by_dragging extends BrowserStackTestNGTest
 						test14.log(LogStatus.FAIL, "PAN is OFF , Same Result is showned." 
 								+ test14.addScreenCapture(captureScreenMethod(dest)));
 					}
+					extent.endTest(test14);
 
 				}
 
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+
+				test14.log(LogStatus.FAIL, "Exception Occured. : " + e.getMessage() + " "
+						+ test14.addScreenCapture(captureScreenMethod(dest)));
 			}
-
-			extent.endTest(test14);
-
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-			test14.log(LogStatus.FAIL, "Exception Occured. : " + e.getMessage() + " "
-					+ test14.addScreenCapture(captureScreenMethod(dest)));
 		}
 
 
@@ -151,7 +143,7 @@ public class TC14_Moving_the_map_by_dragging extends BrowserStackTestNGTest
 
 		System.out.println("------------------------------------------------------------------------------------");
 
-		//driver.quit();
+		driver.quit();
 
 	}
 

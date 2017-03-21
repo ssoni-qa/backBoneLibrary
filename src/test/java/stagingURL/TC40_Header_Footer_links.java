@@ -76,7 +76,7 @@ public class TC40_Header_Footer_links extends BrowserStackTestNGTest
 
 	}
 	@Test
-	public void eader_Footer_links() throws InterruptedException, IOException ,Exception
+	public void eader_Footer_links() throws InterruptedException, IOException 
 	{
 		System.out.println("Test Objective : To verify Header Footer links all lead to a page with no 404 errors.");
 
@@ -133,7 +133,6 @@ public class TC40_Header_Footer_links extends BrowserStackTestNGTest
 						+ test40.addScreenCapture(captureScreenMethod(dest)));
 			}
 		}
-		extent.endTest(test40);
 
 	}
 
@@ -167,6 +166,7 @@ public class TC40_Header_Footer_links extends BrowserStackTestNGTest
 	@AfterMethod
 	public void getResult()
 	{
+		extent.endTest(test40);
 		test40.log(LogStatus.INFO, "TC 40 executed succesfully.");
 		System.out.println("------------------------------------------------------------------------------------");
 		driver.quit();

@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Single" duration-ms="49586" started-at="2017-03-20T13:04:23Z" finished-at="2017-03-20T13:05:13Z">
+  <suite name="Single" duration-ms="14062" started-at="2017-03-21T13:18:31Z" finished-at="2017-03-21T13:18:45Z">
     <groups>
     </groups>
-    <test name="TestSuite" duration-ms="49586" started-at="2017-03-20T13:04:23Z" finished-at="2017-03-20T13:05:13Z">
-      <class name="stagingURL.TC40_Header_Footer_links">
-        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:stagingURL.TC40_Header_Footer_links@4667ae56]" name="setUp" is-config="true" duration-ms="2013" started-at="2017-03-20T18:34:23Z" finished-at="2017-03-20T18:34:26Z">
+    <test name="TestSuite" duration-ms="14062" started-at="2017-03-21T13:18:31Z" finished-at="2017-03-21T13:18:45Z">
+      <class name="stagingURL.TC1_To_verify_page_load_on_browser">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:stagingURL.TC1_To_verify_page_load_on_browser@4667ae56]" name="setUp" is-config="true" duration-ms="2346" started-at="2017-03-21T18:48:31Z" finished-at="2017-03-21T18:48:33Z">
           <params>
             <param index="0">
               <value>
@@ -23,30 +23,37 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:stagingURL.TC40_Header_Footer_links@4667ae56]" name="handleTestMethodName" is-config="true" duration-ms="1" started-at="2017-03-20T18:34:26Z" finished-at="2017-03-20T18:34:26Z">
+        <test-method status="PASS" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:stagingURL.TC1_To_verify_page_load_on_browser@4667ae56]" name="handleTestMethodName" is-config="true" duration-ms="0" started-at="2017-03-21T18:48:33Z" finished-at="2017-03-21T18:48:33Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void stagingURL.TC40_Header_Footer_links.eader_Footer_links() throws java.lang.InterruptedException,java.io.IOException,java.lang.Exception]]>
+                <![CDATA[public void stagingURL.TC1_To_verify_page_load_on_browser.verify_page_load_on_browser() throws java.lang.InterruptedException,java.io.IOException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- handleTestMethodName -->
-        <test-method status="PASS" signature="eader_Footer_links()[pri:0, instance:stagingURL.TC40_Header_Footer_links@4667ae56]" name="eader_Footer_links" duration-ms="47115" started-at="2017-03-20T18:34:26Z" finished-at="2017-03-20T18:35:13Z">
+        <test-method status="PASS" signature="verify_page_load_on_browser()[pri:0, instance:stagingURL.TC1_To_verify_page_load_on_browser@4667ae56]" name="verify_page_load_on_browser" duration-ms="11236" started-at="2017-03-21T18:48:33Z" finished-at="2017-03-21T18:48:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- eader_Footer_links -->
-        <test-method status="PASS" signature="getResult()[pri:0, instance:stagingURL.TC40_Header_Footer_links@4667ae56]" name="getResult" is-config="true" duration-ms="88" started-at="2017-03-20T18:35:13Z" finished-at="2017-03-20T18:35:13Z">
+        </test-method> <!-- verify_page_load_on_browser -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:stagingURL.TC1_To_verify_page_load_on_browser@4667ae56]" name="getResult" is-config="true" duration-ms="112" started-at="2017-03-21T18:48:45Z" finished-at="2017-03-21T18:48:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_page_load_on_browser status=SUCCESS method=TC1_To_verify_page_load_on_browser.verify_page_load_on_browser()[pri:0, instance:stagingURL.TC1_To_verify_page_load_on_browser@4667ae56] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:stagingURL.TC40_Header_Footer_links@4667ae56]" name="tearDown" is-config="true" duration-ms="338" started-at="2017-03-20T18:35:13Z" finished-at="2017-03-20T18:35:13Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:stagingURL.TC1_To_verify_page_load_on_browser@4667ae56]" name="tearDown" is-config="true" duration-ms="338" started-at="2017-03-21T18:48:45Z" finished-at="2017-03-21T18:48:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- stagingURL.TC40_Header_Footer_links -->
+      </class> <!-- stagingURL.TC1_To_verify_page_load_on_browser -->
     </test> <!-- TestSuite -->
   </suite> <!-- Single -->
 </testng-results>

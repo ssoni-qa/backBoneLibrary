@@ -93,7 +93,7 @@ public class BrowserStackTestNGTest {
 		//driver = new RemoteWebDriver(new URL("http://"+username+":"+accessKey+"@"+config.get("server")+"/wd/hub"), capabilities);
 	    driver= new ChromeDriver();
 		wc=new WebDriverWait(driver, 30);
-		extent = new ExtentReports("./etestReport/testReport.html",true,NetworkMode.OFFLINE);
+		extent = new ExtentReports("./etestReport/testReport.html",false,NetworkMode.OFFLINE);
 		//Created object of testng SoftAssert class to use It's Properties.
 		s_assert = new SoftAssert();
 	}

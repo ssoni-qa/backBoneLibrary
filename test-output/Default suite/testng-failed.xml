@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="stagingURL.TC26_Get_direction_button">
+      <class name="stagingURL.TC2_To_verify_regionalmap_presented_on_page_load">
         <methods>
-          <include name="get_Direction_Button"/>
           <include name="tearDown"/>
+          <include name="verify_regionalmap_presented_on_page_load"/>
         </methods>
-      </class> <!-- stagingURL.TC26_Get_direction_button -->
+      </class> <!-- stagingURL.TC2_To_verify_regionalmap_presented_on_page_load -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
