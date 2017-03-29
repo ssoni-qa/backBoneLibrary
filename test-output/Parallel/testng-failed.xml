@@ -1,57 +1,402 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="4" guice-stage="DEVELOPMENT" name="Failed suite [Parallel]" parallel="tests">
-  <test name="SingleTestIE(failed)" parallel="tests">
-    <parameter name="environment" value="ie"/>
-    <parameter name="config" value="local.conf.json"/>
-    <classes>
-      <class name="stagingQA1.Verify_page_load_on_browser">
-        <methods>
-          <include name="verify_page_load_on_browser"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- stagingQA1.Verify_page_load_on_browser -->
-    </classes>
-  </test> <!-- SingleTestIE(failed) -->
-  <test name="SingleTestSafari(failed)" parallel="tests">
-    <parameter name="environment" value="safari"/>
-    <parameter name="config" value="local.conf.json"/>
-    <classes>
-      <class name="stagingQA1.Verify_page_load_on_browser">
-        <methods>
-          <include name="verify_page_load_on_browser"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- stagingQA1.Verify_page_load_on_browser -->
-    </classes>
-  </test> <!-- SingleTestSafari(failed) -->
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Parallel]" parallel="tests">
   <test name="SingleTestChrome(failed)" parallel="tests">
     <parameter name="environment" value="chrome"/>
-    <parameter name="config" value="local.conf.json"/>
+    <parameter name="config" value="local.parallel.conf.json"/>
     <classes>
-      <class name="stagingQA1.Verify_page_load_on_browser">
+      <class name="stagingURL.TC40_Header_Footer_links">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="eader_Footer_links"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC40_Header_Footer_links -->
+      <class name="stagingURL.TC25_Result_Panel_Click_on_Bubble">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="result_Panel_Click_on_Bubble"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC25_Result_Panel_Click_on_Bubble -->
+      <class name="stagingURL.TC6_valid_postal_code">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="valid_postal_code"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC6_valid_postal_code -->
+      <class name="stagingURL.TC9_Invalid_city_and_state_name">
+        <methods>
+          <include name="invalid_postal_code"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC9_Invalid_city_and_state_name -->
+      <class name="stagingURL.TC30_Send_Location_details_to_email_address">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="send_location_details_to_email_address"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC30_Send_Location_details_to_email_address -->
+      <class name="stagingURL.TC12_Invalid_Street_address_with_valid_CityName_and_valid_StateName">
+        <methods>
+          <include name="invalid_Street_address_with_valid_CityName_and_valid_StateName"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC12_Invalid_Street_address_with_valid_CityName_and_valid_StateName -->
+      <class name="stagingURL.TC13_Valid_Street_address_with_invalid_City_name_and_valid_StateProvince_name">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="invalid_postal_code"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC13_Valid_Street_address_with_invalid_City_name_and_valid_StateProvince_name -->
+      <class name="stagingURL.TC4_Blank_address_search_textbox">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="blank_address_search_textbox"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC4_Blank_address_search_textbox -->
+      <class name="stagingURL.TC7_invalid_postal_code">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="valid_postal_code"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC7_invalid_postal_code -->
+      <class name="stagingURL.TC11_Valid_StreetAddress_City_and_StateProvince_provided">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="valid_cityName_invalid_state"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC11_Valid_StreetAddress_City_and_StateProvince_provided -->
+      <class name="stagingURL.TC3_To_veirfy_on_Mobile_device_is_GPS_location_detected">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="to_veirfy_on_Mobile_device_is_GPS_location_detected"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC3_To_veirfy_on_Mobile_device_is_GPS_location_detected -->
+      <class name="stagingURL.TC8_valid_city_and_state_name">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="valid_postal_code"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC8_valid_city_and_state_name -->
+      <class name="stagingURL.TC23_Zoom_out">
+        <methods>
+          <include name="zoom_out"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC23_Zoom_out -->
+      <class name="stagingURL.TC10_valid_cityName_invalid_state">
+        <methods>
+          <include name="valid_cityName_invalid_state"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC10_valid_cityName_invalid_state -->
+      <class name="stagingURL.TC18_No_changes_to_search_filters_based_on_the_map_movement">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="no_changes_to_search_filters_based_on_the_map_movement"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC18_No_changes_to_search_filters_based_on_the_map_movement -->
+      <class name="stagingURL.TC28_Close_button_bubble_icon">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="close_button_of_the_details_bubble_icon"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC28_Close_button_bubble_icon -->
+      <class name="stagingURL.TC29_Send_Location_details_to_Phone_via_SMS">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="send_location_details_to_phone_via_sms"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC29_Send_Location_details_to_Phone_via_SMS -->
+      <class name="stagingURL.TC33_Search_radius_selection">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="search_radius_selection"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC33_Search_radius_selection -->
+      <class name="stagingURL.TC14_Moving_the_map_by_dragging">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="moving_the_map_by_dragging"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC14_Moving_the_map_by_dragging -->
+      <class name="stagingURL.TC22_Zoom_In">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="zoom_In"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC22_Zoom_In -->
+      <class name="stagingURL.TC2_To_verify_regionalmap_presented_on_page_load">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="verify_regionalmap_presented_on_page_load"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC2_To_verify_regionalmap_presented_on_page_load -->
+      <class name="stagingURL.TC5_Special_characters_in_the_search_textbox">
+        <methods>
+          <include name="special_characters_in_the_search_textbox"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC5_Special_characters_in_the_search_textbox -->
+      <class name="stagingURL.TC26_Get_direction_button">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="get_Direction_Button"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC26_Get_direction_button -->
+      <class name="stagingURL.TC1_To_verify_page_load_on_browser">
         <methods>
           <include name="verify_page_load_on_browser"/>
           <include name="tearDown"/>
@@ -67,14 +412,405 @@
           <include name="setUp"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- stagingQA1.Verify_page_load_on_browser -->
+      </class> <!-- stagingURL.TC1_To_verify_page_load_on_browser -->
     </classes>
   </test> <!-- SingleTestChrome(failed) -->
   <test name="SingleTestFirefox(failed)" parallel="tests">
     <parameter name="environment" value="firefox"/>
-    <parameter name="config" value="local.conf.json"/>
+    <parameter name="config" value="local.parallel.conf.json"/>
     <classes>
-      <class name="stagingQA1.Verify_page_load_on_browser">
+      <class name="stagingURL.TC40_Header_Footer_links">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="eader_Footer_links"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC40_Header_Footer_links -->
+      <class name="stagingURL.TC25_Result_Panel_Click_on_Bubble">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="result_Panel_Click_on_Bubble"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC25_Result_Panel_Click_on_Bubble -->
+      <class name="stagingURL.TC6_valid_postal_code">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="valid_postal_code"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC6_valid_postal_code -->
+      <class name="stagingURL.TC9_Invalid_city_and_state_name">
+        <methods>
+          <include name="invalid_postal_code"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC9_Invalid_city_and_state_name -->
+      <class name="stagingURL.TC30_Send_Location_details_to_email_address">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="send_location_details_to_email_address"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC30_Send_Location_details_to_email_address -->
+      <class name="stagingURL.TC12_Invalid_Street_address_with_valid_CityName_and_valid_StateName">
+        <methods>
+          <include name="invalid_Street_address_with_valid_CityName_and_valid_StateName"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC12_Invalid_Street_address_with_valid_CityName_and_valid_StateName -->
+      <class name="stagingURL.TC13_Valid_Street_address_with_invalid_City_name_and_valid_StateProvince_name">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="invalid_postal_code"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC13_Valid_Street_address_with_invalid_City_name_and_valid_StateProvince_name -->
+      <class name="stagingURL.TC4_Blank_address_search_textbox">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="blank_address_search_textbox"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC4_Blank_address_search_textbox -->
+      <class name="stagingURL.TC7_invalid_postal_code">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="valid_postal_code"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC7_invalid_postal_code -->
+      <class name="stagingURL.TC11_Valid_StreetAddress_City_and_StateProvince_provided">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="valid_cityName_invalid_state"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC11_Valid_StreetAddress_City_and_StateProvince_provided -->
+      <class name="stagingURL.TC3_To_veirfy_on_Mobile_device_is_GPS_location_detected">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="to_veirfy_on_Mobile_device_is_GPS_location_detected"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC3_To_veirfy_on_Mobile_device_is_GPS_location_detected -->
+      <class name="stagingURL.TC8_valid_city_and_state_name">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="valid_postal_code"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC8_valid_city_and_state_name -->
+      <class name="stagingURL.TC23_Zoom_out">
+        <methods>
+          <include name="zoom_out"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC23_Zoom_out -->
+      <class name="stagingURL.TC10_valid_cityName_invalid_state">
+        <methods>
+          <include name="valid_cityName_invalid_state"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC10_valid_cityName_invalid_state -->
+      <class name="stagingURL.TC18_No_changes_to_search_filters_based_on_the_map_movement">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="no_changes_to_search_filters_based_on_the_map_movement"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC18_No_changes_to_search_filters_based_on_the_map_movement -->
+      <class name="stagingURL.TC28_Close_button_bubble_icon">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="close_button_of_the_details_bubble_icon"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC28_Close_button_bubble_icon -->
+      <class name="stagingURL.TC29_Send_Location_details_to_Phone_via_SMS">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="send_location_details_to_phone_via_sms"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC29_Send_Location_details_to_Phone_via_SMS -->
+      <class name="stagingURL.TC33_Search_radius_selection">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="search_radius_selection"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC33_Search_radius_selection -->
+      <class name="stagingURL.TC14_Moving_the_map_by_dragging">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="moving_the_map_by_dragging"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC14_Moving_the_map_by_dragging -->
+      <class name="stagingURL.TC22_Zoom_In">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="zoom_In"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC22_Zoom_In -->
+      <class name="stagingURL.TC2_To_verify_regionalmap_presented_on_page_load">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="verify_regionalmap_presented_on_page_load"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC2_To_verify_regionalmap_presented_on_page_load -->
+      <class name="stagingURL.TC5_Special_characters_in_the_search_textbox">
+        <methods>
+          <include name="special_characters_in_the_search_textbox"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC5_Special_characters_in_the_search_textbox -->
+      <class name="stagingURL.TC26_Get_direction_button">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="get_Direction_Button"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC26_Get_direction_button -->
+      <class name="stagingURL.TC1_To_verify_page_load_on_browser">
         <methods>
           <include name="verify_page_load_on_browser"/>
           <include name="tearDown"/>
@@ -90,14 +826,405 @@
           <include name="setUp"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- stagingQA1.Verify_page_load_on_browser -->
+      </class> <!-- stagingURL.TC1_To_verify_page_load_on_browser -->
     </classes>
   </test> <!-- SingleTestFirefox(failed) -->
-  <test name="SingleTestAndroid(failed)" parallel="tests">
-    <parameter name="environment" value="android"/>
-    <parameter name="config" value="local.conf.json"/>
+  <test name="SingleTestSafari(failed)" parallel="tests">
+    <parameter name="environment" value="safari"/>
+    <parameter name="config" value="local.parallel.conf.json"/>
     <classes>
-      <class name="stagingQA1.Verify_page_load_on_browser">
+      <class name="stagingURL.TC40_Header_Footer_links">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="eader_Footer_links"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC40_Header_Footer_links -->
+      <class name="stagingURL.TC25_Result_Panel_Click_on_Bubble">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="result_Panel_Click_on_Bubble"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC25_Result_Panel_Click_on_Bubble -->
+      <class name="stagingURL.TC6_valid_postal_code">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="valid_postal_code"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC6_valid_postal_code -->
+      <class name="stagingURL.TC9_Invalid_city_and_state_name">
+        <methods>
+          <include name="invalid_postal_code"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC9_Invalid_city_and_state_name -->
+      <class name="stagingURL.TC30_Send_Location_details_to_email_address">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="send_location_details_to_email_address"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC30_Send_Location_details_to_email_address -->
+      <class name="stagingURL.TC12_Invalid_Street_address_with_valid_CityName_and_valid_StateName">
+        <methods>
+          <include name="invalid_Street_address_with_valid_CityName_and_valid_StateName"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC12_Invalid_Street_address_with_valid_CityName_and_valid_StateName -->
+      <class name="stagingURL.TC13_Valid_Street_address_with_invalid_City_name_and_valid_StateProvince_name">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="invalid_postal_code"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC13_Valid_Street_address_with_invalid_City_name_and_valid_StateProvince_name -->
+      <class name="stagingURL.TC4_Blank_address_search_textbox">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="blank_address_search_textbox"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC4_Blank_address_search_textbox -->
+      <class name="stagingURL.TC7_invalid_postal_code">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="valid_postal_code"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC7_invalid_postal_code -->
+      <class name="stagingURL.TC11_Valid_StreetAddress_City_and_StateProvince_provided">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="valid_cityName_invalid_state"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC11_Valid_StreetAddress_City_and_StateProvince_provided -->
+      <class name="stagingURL.TC3_To_veirfy_on_Mobile_device_is_GPS_location_detected">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="to_veirfy_on_Mobile_device_is_GPS_location_detected"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC3_To_veirfy_on_Mobile_device_is_GPS_location_detected -->
+      <class name="stagingURL.TC8_valid_city_and_state_name">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="valid_postal_code"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC8_valid_city_and_state_name -->
+      <class name="stagingURL.TC23_Zoom_out">
+        <methods>
+          <include name="zoom_out"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC23_Zoom_out -->
+      <class name="stagingURL.TC10_valid_cityName_invalid_state">
+        <methods>
+          <include name="valid_cityName_invalid_state"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC10_valid_cityName_invalid_state -->
+      <class name="stagingURL.TC18_No_changes_to_search_filters_based_on_the_map_movement">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="no_changes_to_search_filters_based_on_the_map_movement"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC18_No_changes_to_search_filters_based_on_the_map_movement -->
+      <class name="stagingURL.TC28_Close_button_bubble_icon">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="close_button_of_the_details_bubble_icon"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC28_Close_button_bubble_icon -->
+      <class name="stagingURL.TC29_Send_Location_details_to_Phone_via_SMS">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="send_location_details_to_phone_via_sms"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC29_Send_Location_details_to_Phone_via_SMS -->
+      <class name="stagingURL.TC33_Search_radius_selection">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="search_radius_selection"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC33_Search_radius_selection -->
+      <class name="stagingURL.TC14_Moving_the_map_by_dragging">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="moving_the_map_by_dragging"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC14_Moving_the_map_by_dragging -->
+      <class name="stagingURL.TC22_Zoom_In">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="zoom_In"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC22_Zoom_In -->
+      <class name="stagingURL.TC2_To_verify_regionalmap_presented_on_page_load">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="verify_regionalmap_presented_on_page_load"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC2_To_verify_regionalmap_presented_on_page_load -->
+      <class name="stagingURL.TC5_Special_characters_in_the_search_textbox">
+        <methods>
+          <include name="special_characters_in_the_search_textbox"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC5_Special_characters_in_the_search_textbox -->
+      <class name="stagingURL.TC26_Get_direction_button">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="get_Direction_Button"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC26_Get_direction_button -->
+      <class name="stagingURL.TC1_To_verify_page_load_on_browser">
         <methods>
           <include name="verify_page_load_on_browser"/>
           <include name="tearDown"/>
@@ -113,14 +1240,819 @@
           <include name="setUp"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- stagingQA1.Verify_page_load_on_browser -->
+      </class> <!-- stagingURL.TC1_To_verify_page_load_on_browser -->
     </classes>
-  </test> <!-- SingleTestAndroid(failed) -->
+  </test> <!-- SingleTestSafari(failed) -->
+  <test name="SingleTestIE(failed)" parallel="tests">
+    <parameter name="environment" value="ie"/>
+    <parameter name="config" value="local.parallel.conf.json"/>
+    <classes>
+      <class name="stagingURL.TC40_Header_Footer_links">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="eader_Footer_links"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC40_Header_Footer_links -->
+      <class name="stagingURL.TC25_Result_Panel_Click_on_Bubble">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="result_Panel_Click_on_Bubble"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC25_Result_Panel_Click_on_Bubble -->
+      <class name="stagingURL.TC6_valid_postal_code">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="valid_postal_code"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC6_valid_postal_code -->
+      <class name="stagingURL.TC9_Invalid_city_and_state_name">
+        <methods>
+          <include name="invalid_postal_code"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC9_Invalid_city_and_state_name -->
+      <class name="stagingURL.TC30_Send_Location_details_to_email_address">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="send_location_details_to_email_address"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC30_Send_Location_details_to_email_address -->
+      <class name="stagingURL.TC12_Invalid_Street_address_with_valid_CityName_and_valid_StateName">
+        <methods>
+          <include name="invalid_Street_address_with_valid_CityName_and_valid_StateName"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC12_Invalid_Street_address_with_valid_CityName_and_valid_StateName -->
+      <class name="stagingURL.TC13_Valid_Street_address_with_invalid_City_name_and_valid_StateProvince_name">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="invalid_postal_code"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC13_Valid_Street_address_with_invalid_City_name_and_valid_StateProvince_name -->
+      <class name="stagingURL.TC4_Blank_address_search_textbox">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="blank_address_search_textbox"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC4_Blank_address_search_textbox -->
+      <class name="stagingURL.TC7_invalid_postal_code">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="valid_postal_code"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC7_invalid_postal_code -->
+      <class name="stagingURL.TC11_Valid_StreetAddress_City_and_StateProvince_provided">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="valid_cityName_invalid_state"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC11_Valid_StreetAddress_City_and_StateProvince_provided -->
+      <class name="stagingURL.TC3_To_veirfy_on_Mobile_device_is_GPS_location_detected">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="to_veirfy_on_Mobile_device_is_GPS_location_detected"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC3_To_veirfy_on_Mobile_device_is_GPS_location_detected -->
+      <class name="stagingURL.TC8_valid_city_and_state_name">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="valid_postal_code"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC8_valid_city_and_state_name -->
+      <class name="stagingURL.TC23_Zoom_out">
+        <methods>
+          <include name="zoom_out"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC23_Zoom_out -->
+      <class name="stagingURL.TC10_valid_cityName_invalid_state">
+        <methods>
+          <include name="valid_cityName_invalid_state"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC10_valid_cityName_invalid_state -->
+      <class name="stagingURL.TC18_No_changes_to_search_filters_based_on_the_map_movement">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="no_changes_to_search_filters_based_on_the_map_movement"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC18_No_changes_to_search_filters_based_on_the_map_movement -->
+      <class name="stagingURL.TC28_Close_button_bubble_icon">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="close_button_of_the_details_bubble_icon"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC28_Close_button_bubble_icon -->
+      <class name="stagingURL.TC29_Send_Location_details_to_Phone_via_SMS">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="send_location_details_to_phone_via_sms"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC29_Send_Location_details_to_Phone_via_SMS -->
+      <class name="stagingURL.TC33_Search_radius_selection">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="search_radius_selection"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC33_Search_radius_selection -->
+      <class name="stagingURL.TC14_Moving_the_map_by_dragging">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="moving_the_map_by_dragging"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC14_Moving_the_map_by_dragging -->
+      <class name="stagingURL.TC22_Zoom_In">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="zoom_In"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC22_Zoom_In -->
+      <class name="stagingURL.TC2_To_verify_regionalmap_presented_on_page_load">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="verify_regionalmap_presented_on_page_load"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC2_To_verify_regionalmap_presented_on_page_load -->
+      <class name="stagingURL.TC5_Special_characters_in_the_search_textbox">
+        <methods>
+          <include name="special_characters_in_the_search_textbox"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC5_Special_characters_in_the_search_textbox -->
+      <class name="stagingURL.TC26_Get_direction_button">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="get_Direction_Button"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC26_Get_direction_button -->
+      <class name="stagingURL.TC1_To_verify_page_load_on_browser">
+        <methods>
+          <include name="verify_page_load_on_browser"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC1_To_verify_page_load_on_browser -->
+    </classes>
+  </test> <!-- SingleTestIE(failed) -->
   <test name="SingleTestiOS(failed)" parallel="tests">
     <parameter name="environment" value="iphone"/>
-    <parameter name="config" value="local.conf.json"/>
+    <parameter name="config" value="local.parallel.conf.json"/>
     <classes>
-      <class name="stagingQA1.Verify_page_load_on_browser">
+      <class name="stagingURL.TC40_Header_Footer_links">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="eader_Footer_links"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC40_Header_Footer_links -->
+      <class name="stagingURL.TC25_Result_Panel_Click_on_Bubble">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="result_Panel_Click_on_Bubble"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC25_Result_Panel_Click_on_Bubble -->
+      <class name="stagingURL.TC6_valid_postal_code">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="valid_postal_code"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC6_valid_postal_code -->
+      <class name="stagingURL.TC9_Invalid_city_and_state_name">
+        <methods>
+          <include name="invalid_postal_code"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC9_Invalid_city_and_state_name -->
+      <class name="stagingURL.TC30_Send_Location_details_to_email_address">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="send_location_details_to_email_address"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC30_Send_Location_details_to_email_address -->
+      <class name="stagingURL.TC12_Invalid_Street_address_with_valid_CityName_and_valid_StateName">
+        <methods>
+          <include name="invalid_Street_address_with_valid_CityName_and_valid_StateName"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC12_Invalid_Street_address_with_valid_CityName_and_valid_StateName -->
+      <class name="stagingURL.TC13_Valid_Street_address_with_invalid_City_name_and_valid_StateProvince_name">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="invalid_postal_code"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC13_Valid_Street_address_with_invalid_City_name_and_valid_StateProvince_name -->
+      <class name="stagingURL.TC4_Blank_address_search_textbox">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="blank_address_search_textbox"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC4_Blank_address_search_textbox -->
+      <class name="stagingURL.TC7_invalid_postal_code">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="valid_postal_code"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC7_invalid_postal_code -->
+      <class name="stagingURL.TC11_Valid_StreetAddress_City_and_StateProvince_provided">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="valid_cityName_invalid_state"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC11_Valid_StreetAddress_City_and_StateProvince_provided -->
+      <class name="stagingURL.TC3_To_veirfy_on_Mobile_device_is_GPS_location_detected">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="to_veirfy_on_Mobile_device_is_GPS_location_detected"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC3_To_veirfy_on_Mobile_device_is_GPS_location_detected -->
+      <class name="stagingURL.TC8_valid_city_and_state_name">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="valid_postal_code"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC8_valid_city_and_state_name -->
+      <class name="stagingURL.TC23_Zoom_out">
+        <methods>
+          <include name="zoom_out"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC23_Zoom_out -->
+      <class name="stagingURL.TC10_valid_cityName_invalid_state">
+        <methods>
+          <include name="valid_cityName_invalid_state"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC10_valid_cityName_invalid_state -->
+      <class name="stagingURL.TC18_No_changes_to_search_filters_based_on_the_map_movement">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="no_changes_to_search_filters_based_on_the_map_movement"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC18_No_changes_to_search_filters_based_on_the_map_movement -->
+      <class name="stagingURL.TC28_Close_button_bubble_icon">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="close_button_of_the_details_bubble_icon"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC28_Close_button_bubble_icon -->
+      <class name="stagingURL.TC29_Send_Location_details_to_Phone_via_SMS">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="send_location_details_to_phone_via_sms"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC29_Send_Location_details_to_Phone_via_SMS -->
+      <class name="stagingURL.TC33_Search_radius_selection">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="search_radius_selection"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC33_Search_radius_selection -->
+      <class name="stagingURL.TC14_Moving_the_map_by_dragging">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="moving_the_map_by_dragging"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC14_Moving_the_map_by_dragging -->
+      <class name="stagingURL.TC22_Zoom_In">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="zoom_In"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC22_Zoom_In -->
+      <class name="stagingURL.TC2_To_verify_regionalmap_presented_on_page_load">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="verify_regionalmap_presented_on_page_load"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC2_To_verify_regionalmap_presented_on_page_load -->
+      <class name="stagingURL.TC5_Special_characters_in_the_search_textbox">
+        <methods>
+          <include name="special_characters_in_the_search_textbox"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC5_Special_characters_in_the_search_textbox -->
+      <class name="stagingURL.TC26_Get_direction_button">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="get_Direction_Button"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC26_Get_direction_button -->
+      <class name="stagingURL.TC1_To_verify_page_load_on_browser">
         <methods>
           <include name="verify_page_load_on_browser"/>
           <include name="tearDown"/>
@@ -136,7 +2068,421 @@
           <include name="setUp"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- stagingQA1.Verify_page_load_on_browser -->
+      </class> <!-- stagingURL.TC1_To_verify_page_load_on_browser -->
     </classes>
   </test> <!-- SingleTestiOS(failed) -->
+  <test name="SingleTestAndroid(failed)" parallel="tests">
+    <parameter name="environment" value="android"/>
+    <parameter name="config" value="local.parallel.conf.json"/>
+    <classes>
+      <class name="stagingURL.TC40_Header_Footer_links">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="eader_Footer_links"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC40_Header_Footer_links -->
+      <class name="stagingURL.TC25_Result_Panel_Click_on_Bubble">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="result_Panel_Click_on_Bubble"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC25_Result_Panel_Click_on_Bubble -->
+      <class name="stagingURL.TC6_valid_postal_code">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="valid_postal_code"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC6_valid_postal_code -->
+      <class name="stagingURL.TC9_Invalid_city_and_state_name">
+        <methods>
+          <include name="invalid_postal_code"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC9_Invalid_city_and_state_name -->
+      <class name="stagingURL.TC30_Send_Location_details_to_email_address">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="send_location_details_to_email_address"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC30_Send_Location_details_to_email_address -->
+      <class name="stagingURL.TC12_Invalid_Street_address_with_valid_CityName_and_valid_StateName">
+        <methods>
+          <include name="invalid_Street_address_with_valid_CityName_and_valid_StateName"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC12_Invalid_Street_address_with_valid_CityName_and_valid_StateName -->
+      <class name="stagingURL.TC13_Valid_Street_address_with_invalid_City_name_and_valid_StateProvince_name">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="invalid_postal_code"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC13_Valid_Street_address_with_invalid_City_name_and_valid_StateProvince_name -->
+      <class name="stagingURL.TC4_Blank_address_search_textbox">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="blank_address_search_textbox"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC4_Blank_address_search_textbox -->
+      <class name="stagingURL.TC7_invalid_postal_code">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="valid_postal_code"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC7_invalid_postal_code -->
+      <class name="stagingURL.TC11_Valid_StreetAddress_City_and_StateProvince_provided">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="valid_cityName_invalid_state"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC11_Valid_StreetAddress_City_and_StateProvince_provided -->
+      <class name="stagingURL.TC3_To_veirfy_on_Mobile_device_is_GPS_location_detected">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="to_veirfy_on_Mobile_device_is_GPS_location_detected"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC3_To_veirfy_on_Mobile_device_is_GPS_location_detected -->
+      <class name="stagingURL.TC8_valid_city_and_state_name">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="valid_postal_code"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC8_valid_city_and_state_name -->
+      <class name="stagingURL.TC23_Zoom_out">
+        <methods>
+          <include name="zoom_out"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC23_Zoom_out -->
+      <class name="stagingURL.TC10_valid_cityName_invalid_state">
+        <methods>
+          <include name="valid_cityName_invalid_state"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC10_valid_cityName_invalid_state -->
+      <class name="stagingURL.TC18_No_changes_to_search_filters_based_on_the_map_movement">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="no_changes_to_search_filters_based_on_the_map_movement"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC18_No_changes_to_search_filters_based_on_the_map_movement -->
+      <class name="stagingURL.TC28_Close_button_bubble_icon">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="close_button_of_the_details_bubble_icon"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC28_Close_button_bubble_icon -->
+      <class name="stagingURL.TC29_Send_Location_details_to_Phone_via_SMS">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="send_location_details_to_phone_via_sms"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC29_Send_Location_details_to_Phone_via_SMS -->
+      <class name="stagingURL.TC33_Search_radius_selection">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="search_radius_selection"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC33_Search_radius_selection -->
+      <class name="stagingURL.TC14_Moving_the_map_by_dragging">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="moving_the_map_by_dragging"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC14_Moving_the_map_by_dragging -->
+      <class name="stagingURL.TC22_Zoom_In">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="zoom_In"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC22_Zoom_In -->
+      <class name="stagingURL.TC2_To_verify_regionalmap_presented_on_page_load">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="verify_regionalmap_presented_on_page_load"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC2_To_verify_regionalmap_presented_on_page_load -->
+      <class name="stagingURL.TC5_Special_characters_in_the_search_textbox">
+        <methods>
+          <include name="special_characters_in_the_search_textbox"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC5_Special_characters_in_the_search_textbox -->
+      <class name="stagingURL.TC26_Get_direction_button">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="get_Direction_Button"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC26_Get_direction_button -->
+      <class name="stagingURL.TC1_To_verify_page_load_on_browser">
+        <methods>
+          <include name="verify_page_load_on_browser"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- stagingURL.TC1_To_verify_page_load_on_browser -->
+    </classes>
+  </test> <!-- SingleTestAndroid(failed) -->
 </suite> <!-- Failed suite [Parallel] -->

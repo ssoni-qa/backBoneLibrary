@@ -5,13 +5,15 @@
     <parameter name="environment" value="chrome"/>
     <parameter name="config" value="single.webdriver.conf.json"/>
     <classes>
-      <class name="stagingURL.TC1_To_verify_page_load_on_browser">
+      <class name="stagingUrl.TC8_valid_city_and_state_name">
         <methods>
-          <include name="verify_page_load_on_browser"/>
+          <include name="handleTestMethodName"/>
+          <include name="valid_postal_code"/>
           <include name="tearDown"/>
+          <include name="getResult"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- stagingURL.TC1_To_verify_page_load_on_browser -->
+      </class> <!-- stagingUrl.TC8_valid_city_and_state_name -->
     </classes>
   </test> <!-- TestSuite(failed) -->
 </suite> <!-- Failed suite [Single] -->

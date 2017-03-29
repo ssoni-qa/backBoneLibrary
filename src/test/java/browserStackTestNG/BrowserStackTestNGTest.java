@@ -1,6 +1,8 @@
 package browserStackTestNG;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.asserts.SoftAssert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -15,6 +17,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
@@ -24,6 +27,7 @@ import java.util.Iterator;
 import org.apache.commons.io.FileUtils;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -31,6 +35,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.security.UserAndPassword;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -39,9 +45,9 @@ public class BrowserStackTestNGTest {
 	public  WebDriver driver;
 	public WebDriverWait wc;
 	private Local l;
-    public  ExtentReports extent;
-    public  String dest;
-    public  File destination;
+	public  ExtentReports extent;
+	public  String dest;
+	public  File destination;
 	public  String testName;
 	public SoftAssert s_assert;
 
@@ -91,8 +97,18 @@ public class BrowserStackTestNGTest {
 			l.start(options);
 		}
 		//driver = new RemoteWebDriver(new URL("http://"+username+":"+accessKey+"@"+config.get("server")+"/wd/hub"), capabilities);
-	    driver= new ChromeDriver();
+		
+		DesiredCapabilities capability = DesiredCapabilities.chrome();
+		capability.setCapability("chrome.switches", Arrays.asList("–disable-extensions"));
+		capability.setCapability("chrome.binary", "/Applications/Google Chrome.app");
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("user-data-dir=C:/Users/user_name/AppData/Local/Google/Chrome/User Data/Default");
+		driver = new ChromeDriver(capability);
+		
+		
+		//driver= new ChromeDriver();
 		wc=new WebDriverWait(driver, 30);
+		
 		extent = new ExtentReports("./etestReport/testReport.html",false,NetworkMode.OFFLINE);
 		//Created object of testng SoftAssert class to use It's Properties.
 		s_assert = new SoftAssert();
@@ -102,19 +118,20 @@ public class BrowserStackTestNGTest {
 		TakesScreenshot ts=(TakesScreenshot)driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
 		dest=System.getProperty("user.dir") +"//etestReport//"+System.currentTimeMillis()+".png";
-	    destination = new File(dest);
+		destination = new File(dest);
 		FileUtils.copyFile(source, destination);
 		Path p = Paths.get(dest);
 		String screenFile = p.getFileName().toString();
 		return screenFile;
-		
+
 	}
 
 	@AfterMethod(alwaysRun=true)
 	public void tearDown() throws Exception {
 		if(l != null) 
 			l.stop();
-		extent.flush();
+		//extent.flush();
+		//driver.quit();
 
 	}
 }

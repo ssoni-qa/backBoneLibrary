@@ -5,7 +5,7 @@
 		<parameter name="config" value="local.parallel.conf.json" />
 		<parameter name="environment" value="chrome" />
 		<packages>
-			<package name="stagingQA1"></package>
+			<package name="stagingURL"></package>
 		</packages>
 	</test>
 
@@ -13,7 +13,7 @@
 		<parameter name="config" value="local.parallel.conf.json" />
 		<parameter name="environment" value="firefox" />
 		<packages>
-			<package name="stagingQA1"></package>
+			<package name="stagingURL"></package>
 		</packages>
 	</test>
 
@@ -21,7 +21,7 @@
 		<parameter name="config" value="local.parallel.conf.json" />
 		<parameter name="environment" value="safari" />
 		<packages>
-			<package name="stagingQA1"></package>
+			<package name="stagingURL"></package>
 		</packages>
 	</test>
 
@@ -29,21 +29,21 @@
 		<parameter name="config" value="local.parallel.conf.json" />
 		<parameter name="environment" value="ie" />
 		<packages>
-			<package name="stagingQA1"></package>
+			<package name="stagingURL"></package>
 		</packages>
 	</test>
 	<test name="SingleTestiOS">
 		<parameter name="config" value="local.parallel.conf.json" />
 		<parameter name="environment" value="iphone" />
 		<packages>
-			<package name="stagingQA1"></package>
+			<package name="stagingURL"></package>
 		</packages>
 	</test>
 	<test name="SingleTestAndroid">
 		<parameter name="config" value="local.parallel.conf.json" />
 		<parameter name="environment" value="android" />
 		<packages>
-			<package name="stagingQA1"></package>
+			<package name="stagingURL"></package>
 		</packages>
 	</test>
 </suite>
